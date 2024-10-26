@@ -1,0 +1,149 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72165395.pem student-01-3f959667c1bc35.231.194.127
+ssh: Could not resolve hostname student-01-3f959667c1bc35.231.194.127: Name or service not known
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72165395.pem student-01-3f959667c1bc@35.231.194.127
+The authenticity of host '35.231.194.127 (35.231.194.127)' can't be established.
+ED25519 key fingerprint is SHA256:UN18NZgmsSZGCPRaOno3WU3lJYLdAoodIuTZv3Au65U.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '35.231.194.127' (ED25519) to the list of known hosts.
+Linux linux-instance 4.19.0-16-cloud-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ sudo puppet agent -v --test
+2023-09-15 14:09:24.933844 WARN  puppetlabs.facter - locale environment variables were bad; continuing with LANG=C LC_ALL=C
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for linux-instance.us-east1-c.c.qwiklabs-gcp-02-3ab61630b57a.internal
+Info: Applying configuration version '1694786966'
+Notice: /Stage[main]/Packages/Package[golang]/ensure: created
+Notice: /Stage[main]/Machine_info/File[/tmp/machine_info.txt]/content: 
+--- /tmp/machine_info.txt	2023-09-15 14:05:21.958613728 +0000
++++ /tmp/puppet-file20230915-2853-iu8pn3	2023-09-15 14:09:52.618545833 +0000
+@@ -1,6 +1,6 @@
+ Machine Information
+ -------------------
+ Disks: {"sda"=>{"model"=>"PersistentDisk", "size"=>"10.00 GiB", "size_bytes"=>10737418240, "vendor"=>"Google"}}
+-Memory: {"system"=>{"available"=>"3.64 GiB", "available_bytes"=>3903578112, "capacity"=>"5.66%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"223.35 MiB", "used_bytes"=>234201088}}
++Memory: {"system"=>{"available"=>"3.64 GiB", "available_bytes"=>3905298432, "capacity"=>"5.62%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"221.71 MiB", "used_bytes"=>232480768}}
+ Processors: {"count"=>2, "isa"=>"unknown", "models"=>["AMD EPYC 7B12", "AMD EPYC 7B12"], "physicalcount"=>1}
+ }
+
+Info: Computing checksum on file /tmp/machine_info.txt
+Info: /Stage[main]/Machine_info/File[/tmp/machine_info.txt]: Filebucketed /tmp/machine_info.txt to puppet with sum 22dbdb45761fe98c81b110ef68a17d3b
+Notice: /Stage[main]/Machine_info/File[/tmp/machine_info.txt]/content: content changed '{md5}22dbdb45761fe98c81b110ef68a17d3b' to '{md5}163753c7233ba66310fd17684afb6c6d'
+Notice: Applied catalog in 26.09 seconds
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ apt policy golang
+golang:
+  Installed: 2:1.11~1
+  Candidate: 2:1.11~1
+  Version table:
+     2:1.15~1~bpo10+1 100
+        100 http://deb.debian.org/debian buster-backports/main amd64 Packages
+ *** 2:1.11~1 500
+        500 http://deb.debian.org/debian buster/main amd64 Packages
+        100 /var/lib/dpkg/status
+student-01-3f959667c1bc@linux-instance:~$ cat manifests/init.pp
+cat: manifests/init.pp: No such file or directory
+student-01-3f959667c1bc@linux-instance:~$ cd /etc/puppet/code/environments/production/modules/machine_info
+-bash: cd: /etc/puppet/code/environments/production/modules/machine_info: No such file or directory
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ 
+student-01-3f959667c1bc@linux-instance:~$ sudo puppet agent -v --test
+2023-09-15 14:22:22.025388 WARN  puppetlabs.facter - locale environment variables were bad; continuing with LANG=C LC_ALL=C
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for linux-instance.us-east1-c.c.qwiklabs-gcp-02-3ab61630b57a.internal
+Info: Applying configuration version '1694787743'
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: 
+--- /tmp/machine_info.txt	2023-09-15 14:09:52.650545764 +0000
++++ /tmp/puppet-file20230915-9294-4rts2r	2023-09-15 14:22:24.090074504 +0000
+@@ -1,6 +1,7 @@
+ Machine Information
+ -------------------
+ Disks: {"sda"=>{"model"=>"PersistentDisk", "size"=>"10.00 GiB", "size_bytes"=>10737418240, "vendor"=>"Google"}}
+-Memory: {"system"=>{"available"=>"3.64 GiB", "available_bytes"=>3905298432, "capacity"=>"5.62%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"221.71 MiB", "used_bytes"=>232480768}}
++Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3860566016, "capacity"=>"6.70%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"264.37 MiB", "used_bytes"=>277213184}}
+ Processors: {"count"=>2, "isa"=>"unknown", "models"=>["AMD EPYC 7B12", "AMD EPYC 7B12"], "physicalcount"=>1}
++Network Interfaces: ens4,lo
+ }
+
+Info: Computing checksum on file /tmp/machine_info.txt
+Info: /Stage[main]/Machine_info/File[machine_info]: Filebucketed /tmp/machine_info.txt to puppet with sum 163753c7233ba66310fd17684afb6c6d
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: content changed '{md5}163753c7233ba66310fd17684afb6c6d' to '{md5}1ae8af40c9ca3453122654dd0db122f7'
+Notice: Applied catalog in 0.13 seconds
+student-01-3f959667c1bc@linux-instance:~$ cat /tmp/machine_info.txt
+Machine Information
+-------------------
+Disks: {"sda"=>{"model"=>"PersistentDisk", "size"=>"10.00 GiB", "size_bytes"=>10737418240, "vendor"=>"Google"}}
+Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3860566016, "capacity"=>"6.70%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"264.37 MiB", "used_bytes"=>277213184}}
+Processors: {"count"=>2, "isa"=>"unknown", "models"=>["AMD EPYC 7B12", "AMD EPYC 7B12"], "physicalcount"=>1}
+Network Interfaces: ens4,lo
+}
+student-01-3f959667c1bc@linux-instance:~$ sudo puppet agent -v --test
+2023-09-15 14:25:52.962822 WARN  puppetlabs.facter - locale environment variables were bad; continuing with LANG=C LC_ALL=C
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for linux-instance.us-east1-c.c.qwiklabs-gcp-02-3ab61630b57a.internal
+Info: Applying configuration version '1694787954'
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: 
+--- /tmp/machine_info.txt	2023-09-15 14:22:24.122074484 +0000
++++ /tmp/puppet-file20230915-9464-1xuhsdi	2023-09-15 14:25:54.797956892 +0000
+@@ -1,7 +1,7 @@
+ Machine Information
+ -------------------
+ Disks: {"sda"=>{"model"=>"PersistentDisk", "size"=>"10.00 GiB", "size_bytes"=>10737418240, "vendor"=>"Google"}}
+-Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3860566016, "capacity"=>"6.70%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"264.37 MiB", "used_bytes"=>277213184}}
++Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3862007808, "capacity"=>"6.66%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"263.00 MiB", "used_bytes"=>275771392}}
+ Processors: {"count"=>2, "isa"=>"unknown", "models"=>["AMD EPYC 7B12", "AMD EPYC 7B12"], "physicalcount"=>1}
+ Network Interfaces: ens4,lo
+ }
+
+Info: Computing checksum on file /tmp/machine_info.txt
+Info: /Stage[main]/Machine_info/File[machine_info]: Filebucketed /tmp/machine_info.txt to puppet with sum 1ae8af40c9ca3453122654dd0db122f7
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: content changed '{md5}1ae8af40c9ca3453122654dd0db122f7' to '{md5}3758bcceff956ed2d43153ded1e8f3c0'
+Notice: Applied catalog in 0.08 seconds
+student-01-3f959667c1bc@linux-instance:~$ sudo puppet agent -v --test
+2023-09-15 14:29:26.792720 WARN  puppetlabs.facter - locale environment variables were bad; continuing with LANG=C LC_ALL=C
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for linux-instance.us-east1-c.c.qwiklabs-gcp-02-3ab61630b57a.internal
+Info: Applying configuration version '1694788167'
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: 
+--- /tmp/machine_info.txt	2023-09-15 14:25:54.829956874 +0000
++++ /tmp/puppet-file20230915-9638-mmkock	2023-09-15 14:29:28.225846253 +0000
+@@ -1,7 +1,7 @@
+ Machine Information
+ -------------------
+ Disks: {"sda"=>{"model"=>"PersistentDisk", "size"=>"10.00 GiB", "size_bytes"=>10737418240, "vendor"=>"Google"}}
+-Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3862007808, "capacity"=>"6.66%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"263.00 MiB", "used_bytes"=>275771392}}
++Memory: {"system"=>{"available"=>"3.60 GiB", "available_bytes"=>3865808896, "capacity"=>"6.57%", "total"=>"3.85 GiB", "total_bytes"=>4137779200, "used"=>"259.37 MiB", "used_bytes"=>271970304}}
+ Processors: {"count"=>2, "isa"=>"unknown", "models"=>["AMD EPYC 7B12", "AMD EPYC 7B12"], "physicalcount"=>1}
+ Network Interfaces: ens4,lo
+ }
+
+Info: Computing checksum on file /tmp/machine_info.txt
+Info: /Stage[main]/Machine_info/File[machine_info]: Filebucketed /tmp/machine_info.txt to puppet with sum 3758bcceff956ed2d43153ded1e8f3c0
+Notice: /Stage[main]/Machine_info/File[machine_info]/content: content changed '{md5}3758bcceff956ed2d43153ded1e8f3c0' to '{md5}5fd769b813dd6ccdc84c503100550a4a'
+Notice: Applied catalog in 0.07 seconds
+student-01-3f959667c1bc@linux-instance:~$ 
+

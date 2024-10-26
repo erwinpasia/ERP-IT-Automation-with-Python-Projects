@@ -1,0 +1,154 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71571673.pem student-01-c85a3cfab519@35.196.90.14
+The authenticity of host '35.196.90.14 (35.196.90.14)' can't be established.
+ED25519 key fingerprint is SHA256:bHrF1ZwT/ZM88rgXjnheOZTLPkZuOeB9t522s9vshMg.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '35.196.90.14' (ED25519) to the list of known hosts.
+Linux linux-instance 4.9.0-15-amd64 #1 SMP Debian 4.9.258-1 (2021-03-08) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ls
+data  scripts
+student-01-c85a3cfab519@linux-instance:~$ ls -alh *
+data:
+total 12K
+drwxrwxrwx 2 root                    root                    4.0K Sep 12 16:33 .
+drwxr-xr-x 5 student-01-c85a3cfab519 student-01-c85a3cfab519 4.0K Sep 12 16:33 ..
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 jane_contact_07292018.csv
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 jane_profile_07272018.doc
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 janez_profile_11042019.doc
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 kwood_pic_04032017.jpg
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 kwood_profile_04022017.doc
+-rw-rw-rw- 1 root                    root                     412 Sep 12 16:33 list.txt
+-rw-rw-rw- 1 root                    root                       0 Sep 12 16:33 pchow_pic_05162019.jpg
+
+scripts:
+total 8.0K
+drwxrwxrwx 2 root                    root                    4.0K Sep 12 16:33 .
+drwxr-xr-x 5 student-01-c85a3cfab519 student-01-c85a3cfab519 4.0K Sep 12 16:33 ..
+student-01-c85a3cfab519@linux-instance:~$ cat data/list.txt 
+001 jane /data/jane_profile_07272018.doc
+002 kwood /data/kwood_profile_04022017.doc
+003 pchow /data/pchow_profile_05152019.doc
+004 janez /data/janez_profile_11042019.doc
+005 jane /data/jane_pic_07282018.jpg
+006 kwood /data/kwood_pic_04032017.jpg
+007 pchow /data/pchow_pic_05162019.jpg
+008 jane /data/jane_contact_07292018.csv
+009 kwood /data/kwood_contact_04042017.csv
+010 pchow /data/pchow_contact_05172019.csv
+student-01-c85a3cfab519@linux-instance:~$ grep " jane " ../data/list.txt | cut -d ' ' -f 1
+grep: ../data/list.txt: No such file or directory
+student-01-c85a3cfab519@linux-instance:~$ grep " jane " .data/list.txt | cut -d ' ' -f 1
+grep: .data/list.txt: No such file or directory
+student-01-c85a3cfab519@linux-instance:~$ grep " jane " data/list.txt | cut -d ' ' -f 1
+001
+005
+008
+student-01-c85a3cfab519@linux-instance:~$ if test -e ~/data/jane_profile_07272018.doc; then echo "File exists"; else echo "File doesn't exist"; fi
+File exists
+student-01-c85a3cfab519@linux-instance:~$ pwd
+/home/student-01-c85a3cfab519
+student-01-c85a3cfab519@linux-instance:~$ ls
+data  scripts
+student-01-c85a3cfab519@linux-instance:~$ > test.txt
+student-01-c85a3cfab519@linux-instance:~$ ls
+data  scripts  test.txt
+student-01-c85a3cfab519@linux-instance:~$ echo "I am appending text to this test file" >> test.txt
+student-01-c85a3cfab519@linux-instance:~$ cat test.txt 
+I am appending text to this test file
+student-01-c85a3cfab519@linux-instance:~$ for i in 1 2 3; do echo $i; done
+1
+2
+3
+student-01-c85a3cfab519@linux-instance:~$ pwd
+/home/student-01-c85a3cfab519
+student-01-c85a3cfab519@linux-instance:~$ ls
+data  scripts  test.txt
+student-01-c85a3cfab519@linux-instance:~$ cd scripts/
+student-01-c85a3cfab519@linux-instance:~/scripts$ ls
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ nano findJane.sh
+student-01-c85a3cfab519@linux-instance:~/scripts$ > oldFiles.txt
+student-01-c85a3cfab519@linux-instance:~/scripts$ nano findJane.sh
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ ls
+findJane.sh  oldFiles.txt
+student-01-c85a3cfab519@linux-instance:~/scripts$ ls -aslh 
+total 12K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 16:41 .
+4.0K drwxr-xr-x 6 student-01-c85a3cfab519 student-01-c85a3cfab519 4.0K Sep 12 16:38 ..
+4.0K -rw-r--r-- 1 student-01-c85a3cfab519 student-01-c85a3cfab519  175 Sep 12 16:41 findJane.sh
+   0 -rw-r--r-- 1 student-01-c85a3cfab519 student-01-c85a3cfab519    0 Sep 12 16:39 oldFiles.txt
+student-01-c85a3cfab519@linux-instance:~/scripts$ chmod +x findJane.sh 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ ./findJane.sh 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ cat oldFiles.txt 
+/home/student-01-c85a3cfab519/data/jane_profile_07272018.doc
+/home/student-01-c85a3cfab519/data/jane_contact_07292018.csv
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ vi changeJane.py
+student-01-c85a3cfab519@linux-instance:~/scripts$ nano changeJane.py
+student-01-c85a3cfab519@linux-instance:~/scripts$ chmod +x changeJane.py
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ ./changeJane.py oldFiles.txt 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ 
+student-01-c85a3cfab519@linux-instance:~/scripts$ cat ~/data/
+cat: /home/student-01-c85a3cfab519/data/: Is a directory
+student-01-c85a3cfab519@linux-instance:~/scripts$ ls
+changeJane.py  findJane.sh  oldFiles.txt
+student-01-c85a3cfab519@linux-instance:~/scripts$ cd ~/data/
+student-01-c85a3cfab519@linux-instance:~/data$ 
+student-01-c85a3cfab519@linux-instance:~/data$ ls
+janez_profile_11042019.doc  jdoe_contact_07292018.csv  jdoe_profile_07272018.doc  kwood_pic_04032017.jpg  kwood_profile_04022017.doc  list.txt  pchow_pic_05162019.jpg
+student-01-c85a3cfab519@linux-instance:~/data$ 
+student-01-c85a3cfab519@linux-instance:~/data$ 
+student-01-c85a3cfab519@linux-instance:~/data$ cat ~/scripts/changeJane.py 
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+file = sys.argv[1]
+with open(file) as f:
+  for line in f.readlines():
+      source = line.strip()
+      destination = source.replace('jane', 'jdoe')
+      subprocess.run(['mv', source, destination])
+  f.close()
+student-01-c85a3cfab519@linux-instance:~/data$ 
+student-01-c85a3cfab519@linux-instance:~/data$ ls ~/scripts/
+changeJane.py  findJane.sh  oldFiles.txt
+student-01-c85a3cfab519@linux-instance:~/data$ ls ~/scripts/findJane.sh 
+/home/student-01-c85a3cfab519/scripts/findJane.sh
+student-01-c85a3cfab519@linux-instance:~/data$ cat ~/scripts/findJane.sh 
+#!/bin/bash
+> oldFiles.txt
+
+files=$(grep " jane " ../data/list.txt | cut -d ' ' -f 3)
+
+for f in $files; do
+  if [ -e $HOME$f ]; then
+  	echo $HOME$f >> oldFiles.txt
+  fi
+done
+student-01-c85a3cfab519@linux-instance:~/data$ cat ~/scripts/oldFiles.txt 
+/home/student-01-c85a3cfab519/data/jane_profile_07272018.doc
+/home/student-01-c85a3cfab519/data/jane_contact_07292018.csv
+student-01-c85a3cfab519@linux-instance:~/data$ 
+

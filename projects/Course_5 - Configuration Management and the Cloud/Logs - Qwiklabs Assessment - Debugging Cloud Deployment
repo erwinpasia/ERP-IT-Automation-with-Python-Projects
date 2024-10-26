@@ -1,0 +1,320 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L72182206.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72182206.pem student-01-963a220873a7@34.145.54.80
+The authenticity of host '34.145.54.80 (34.145.54.80)' can't be established.
+ED25519 key fingerprint is SHA256:cS88tdb4Q6mYBIKv43O3Y4a11Cs4a0k/2YovgYp3Nlc.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes 
+Warning: Permanently added '34.145.54.80' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-1013-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Sep 15 15:21:39 UTC 2023
+
+  System load:  0.46923828125     Processes:             113
+  Usage of /:   19.1% of 9.51GB   Users logged in:       0
+  Memory usage: 6%                IPv4 address for ens4: 10.138.0.2
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Creating directory '/home/student-01-963a220873a7'.
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+student-01-963a220873a7@ws01:~$ sudo systemctl status apache2
+Unit apache2.service could not be found.
+student-01-963a220873a7@ws01:~$ systemctl
+  UNIT                                                                                         LOAD   ACTIVE     SUB       JOB   DESCRIPTION                                                                  
+  proc-sys-fs-binfmt_misc.automount                                                            loaded active     running         Arbitrary Executable File Formats File System Automount Point                
+  dev-loop0.device                                                                             loaded activating tentative       /dev/loop0
+  dev-loop1.device                                                                             loaded activating tentative       /dev/loop1
+  dev-loop2.device                                                                             loaded activating tentative       /dev/loop2
+  dev-loop3.device                                                                             loaded activating tentative       /dev/loop3
+  sys-devices-pci0000:00-0000:00:03.0-virtio0-host0-target0:0:1-0:0:1:0-block-sda-sda1.device  loaded active     plugged         PersistentDisk cloudimg-rootfs
+  sys-devices-pci0000:00-0000:00:03.0-virtio0-host0-target0:0:1-0:0:1:0-block-sda-sda14.device loaded active     plugged         PersistentDisk 14
+  sys-devices-pci0000:00-0000:00:03.0-virtio0-host0-target0:0:1-0:0:1:0-block-sda-sda15.device loaded active     plugged         PersistentDisk UEFI
+  sys-devices-pci0000:00-0000:00:03.0-virtio0-host0-target0:0:1-0:0:1:0-block-sda.device       loaded active     plugged         PersistentDisk
+  sys-devices-pci0000:00-0000:00:04.0-virtio1-net-ens4.device                                  loaded active     plugged         Virtio network device
+  sys-devices-platform-serial8250-tty-ttyS10.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS10
+  sys-devices-platform-serial8250-tty-ttyS11.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS11
+  sys-devices-platform-serial8250-tty-ttyS12.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS12
+  sys-devices-platform-serial8250-tty-ttyS13.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS13
+  sys-devices-platform-serial8250-tty-ttyS14.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS14
+  sys-devices-platform-serial8250-tty-ttyS15.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS15
+  sys-devices-platform-serial8250-tty-ttyS16.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS16
+  sys-devices-platform-serial8250-tty-ttyS17.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS17
+  sys-devices-platform-serial8250-tty-ttyS18.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS18
+  sys-devices-platform-serial8250-tty-ttyS19.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS19
+  sys-devices-platform-serial8250-tty-ttyS20.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS20
+  sys-devices-platform-serial8250-tty-ttyS21.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS21
+  sys-devices-platform-serial8250-tty-ttyS22.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS22
+  sys-devices-platform-serial8250-tty-ttyS23.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS23
+  sys-devices-platform-serial8250-tty-ttyS24.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS24
+  sys-devices-platform-serial8250-tty-ttyS25.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS25
+  sys-devices-platform-serial8250-tty-ttyS26.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS26
+  sys-devices-platform-serial8250-tty-ttyS27.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS27
+  sys-devices-platform-serial8250-tty-ttyS28.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS28
+  sys-devices-platform-serial8250-tty-ttyS29.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS29
+  sys-devices-platform-serial8250-tty-ttyS30.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS30
+  sys-devices-platform-serial8250-tty-ttyS31.device                                            loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS31
+  sys-devices-platform-serial8250-tty-ttyS4.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS4
+  sys-devices-platform-serial8250-tty-ttyS5.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS5
+  sys-devices-platform-serial8250-tty-ttyS6.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS6
+  sys-devices-platform-serial8250-tty-ttyS7.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS7
+  sys-devices-platform-serial8250-tty-ttyS8.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS8
+  sys-devices-platform-serial8250-tty-ttyS9.device                                             loaded active     plugged         /sys/devices/platform/serial8250/tty/ttyS9
+  sys-devices-pnp0-00:03-tty-ttyS0.device                                                      loaded active     plugged         /sys/devices/pnp0/00:03/tty/ttyS0
+  sys-devices-pnp0-00:04-tty-ttyS1.device                                                      loaded active     plugged         /sys/devices/pnp0/00:04/tty/ttyS1
+  sys-devices-pnp0-00:05-tty-ttyS2.device                                                      loaded active     plugged         /sys/devices/pnp0/00:05/tty/ttyS2
+  sys-devices-pnp0-00:06-tty-ttyS3.device                                                      loaded active     plugged         /sys/devices/pnp0/00:06/tty/ttyS3
+  sys-devices-virtual-misc-rfkill.device                                                       loaded active     plugged         /sys/devices/virtual/misc/rfkill
+  sys-devices-virtual-tty-ttyprintk.device                                                     loaded active     plugged         /sys/devices/virtual/tty/ttyprintk
+  sys-module-configfs.device                                                                   loaded active     plugged         /sys/module/configfs
+  sys-module-fuse.device                                                                       loaded active     plugged         /sys/module/fuse
+  sys-subsystem-net-devices-ens4.device                                                        loaded active     plugged         Virtio network device                                                        
+  -.mount                                                                                      loaded active     mounted         Root Mount
+  boot-efi.mount                                                                               loaded active     mounted         /boot/efi
+  dev-hugepages.mount                                                                          loaded active     mounted         Huge Pages File System
+  dev-mqueue.mount                                                                             loaded active     mounted         POSIX Message Queue File System
+  proc-sys-fs-binfmt_misc.mount                                                                loaded active     mounted         Arbitrary Executable File Formats File System
+  run-credentials-systemd\x2dsysusers.service.mount                                            loaded active     mounted         /run/credentials/systemd-sysusers.service
+  run-snapd-ns-lxd.mnt.mount                                                                   loaded active     mounted         /run/snapd/ns/lxd.mnt
+  run-snapd-ns.mount                                                                           loaded active     mounted         /run/snapd/ns
+  snap-core20-2015.mount                                                                       loaded active     mounted         Mount unit for core20, revision 2015
+  snap-google\x2dcloud\x2dcli-167.mount                                                        loaded active     mounted         Mount unit for google-cloud-cli, revision 167
+  snap-lxd-24322.mount                                                                         loaded active     mounted         Mount unit for lxd, revision 24322
+  snap-snapd-20092.mount                                                                       loaded active     mounted         Mount unit for snapd, revision 20092
+  sys-fs-fuse-connections.mount                                                                loaded active     mounted         FUSE Control File System
+  sys-kernel-config.mount                                                                      loaded active     mounted         Kernel Configuration File System
+  sys-kernel-debug.mount                                                                       loaded active     mounted         Kernel Debug File System
+  sys-kernel-tracing.mount                                                                     loaded active     mounted         Kernel Trace File System                                                     
+  systemd-ask-password-console.path                                                            loaded active     waiting         Dispatch Password Requests to Console Directory Watch
+  systemd-ask-password-wall.path                                                               loaded active     waiting         Forward Password Requests to Wall Directory Watch                            
+  init.scope                                                                                   loaded active     running         System and Service Manager                                                   
+  apparmor.service                                                                             loaded active     exited          Load AppArmor profiles
+  apport.service                                                                               loaded active     exited          LSB: automatic crash report generation
+  blk-availability.service                                                                     loaded active     exited          Availability of block devices
+  chrony.service                                                                               loaded active     running         chrony, an NTP client/server
+  cloud-config.service                                                                         loaded active     exited          Apply the settings specified in cloud-config
+  cloud-final.service                                                                          loaded active     exited          Execute cloud user/final scripts
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ systemctl status apache2
+× apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2023-09-15 15:22:20 UTC; 10s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+        CPU: 31ms
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ sudo systemctl restart apache2
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+student-01-963a220873a7@ws01:~$ systemctl status apache2
+× apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2023-09-15 15:22:45 UTC; 3s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 2861 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+        CPU: 24ms
+student-01-963a220873a7@ws01:~$ systemctl status apache2
+× apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2023-09-15 15:22:45 UTC; 5s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 2861 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+        CPU: 24ms
+student-01-963a220873a7@ws01:~$ sudo systemctl status apache2
+× apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2023-09-15 15:22:45 UTC; 10s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 2861 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+        CPU: 24ms
+
+Sep 15 15:22:45 ws01 systemd[1]: Starting The Apache HTTP Server...
+Sep 15 15:22:45 ws01 apachectl[2864]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Sep 15 15:22:45 ws01 apachectl[2864]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Sep 15 15:22:45 ws01 apachectl[2864]: no listening sockets available, shutting down
+Sep 15 15:22:45 ws01 apachectl[2864]: AH00015: Unable to open logs
+Sep 15 15:22:45 ws01 apachectl[2861]: Action 'start' failed.
+Sep 15 15:22:45 ws01 apachectl[2861]: The Apache error log may have more information.
+Sep 15 15:22:45 ws01 systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Sep 15 15:22:45 ws01 systemd[1]: apache2.service: Failed with result 'exit-code'.
+Sep 15 15:22:45 ws01 systemd[1]: Failed to start The Apache HTTP Server.
+student-01-963a220873a7@ws01:~$ sudo systemctl restart apache2
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+student-01-963a220873a7@ws01:~$ sudo systemctl status apache2
+× apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2023-09-15 15:23:04 UTC; 5s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 2879 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+        CPU: 23ms
+
+Sep 15 15:23:04 ws01 systemd[1]: Starting The Apache HTTP Server...
+Sep 15 15:23:04 ws01 apachectl[2882]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Sep 15 15:23:04 ws01 apachectl[2882]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Sep 15 15:23:04 ws01 apachectl[2882]: no listening sockets available, shutting down
+Sep 15 15:23:04 ws01 apachectl[2882]: AH00015: Unable to open logs
+Sep 15 15:23:04 ws01 apachectl[2879]: Action 'start' failed.
+Sep 15 15:23:04 ws01 apachectl[2879]: The Apache error log may have more information.
+Sep 15 15:23:04 ws01 systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Sep 15 15:23:04 ws01 systemd[1]: apache2.service: Failed with result 'exit-code'.
+Sep 15 15:23:04 ws01 systemd[1]: Failed to start The Apache HTTP Server.
+student-01-963a220873a7@ws01:~$ sudo netstat -nlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      789/sshd: /usr/sbin 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1484/python3        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      372/systemd-resolve 
+tcp6       0      0 :::22                   :::*                    LISTEN      789/sshd: /usr/sbin 
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           372/systemd-resolve 
+udp        0      0 10.138.0.2:68           0.0.0.0:*                           369/systemd-network 
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           1294/chronyd        
+udp6       0      0 ::1:323                 :::*                                1294/chronyd        
+raw6       0      0 :::58                   :::*                    7           369/systemd-network 
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
+unix  2      [ ACC ]     STREAM     LISTENING     14843    1/init               /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     14845    1/init               /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     14846    1/init               /run/systemd/io.system.ManagedOOM
+unix  2      [ ACC ]     STREAM     LISTENING     217      1/init               /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     STREAM     LISTENING     222      1/init               /run/systemd/fsck.progress
+unix  2      [ ACC ]     STREAM     LISTENING     234      1/init               /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     237      1/init               /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     14869    117/systemd-journal  /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     15860    372/systemd-resolve  /run/systemd/resolve/io.systemd.Resolve
+unix  2      [ ACC ]     STREAM     LISTENING     17858    1/init               /var/snap/lxd/common/lxd-user/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17864    1/init               /var/snap/lxd/common/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17091    1/init               /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     17099    1/init               /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17101    1/init               /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16197    1/init               /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     219      1/init               @/org/kernel/linux/storage/multipathd
+unix  2      [ ACC ]     STREAM     LISTENING     17098    1/init               @ISCSIADM_ABSTRACT_NAMESPACE
+student-01-963a220873a7@ws01:~$ ps -ax | grep python3
+    520 ?        Ss     0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    666 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1484 ?        Ss     0:00 python3 /usr/local/bin/jimmytest.py
+   3000 pts/0    R+     0:00 grep --color=auto python3
+student-01-963a220873a7@ws01:~$ cat /usr/local/bin/jimmytest.py
+#!/usr/bin/env python3
+'''    Testing program for socket
+      Author: Jimmy
+'''
+import http.server
+import socketserver
+import http
+
+port = 80
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(http.HTTPStatus.INTERNAL_SERVER_ERROR)
+        self.end_headers()
+        
+        mystring = "500 Internal Server Error!\n"
+        self.data = bytes(mystring, 'utf-8')
+        self.wfile.write(self.data)
+
+with socketserver.TCPServer(("", port), Handler) as httpd:
+    httpd.serve_forever()
+
+student-01-963a220873a7@ws01:~$ sudo kill 1484
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ ps -ax | grep python3
+    520 ?        Ss     0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    666 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   3011 pts/0    R+     0:00 grep --color=auto python3
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ 
+student-01-963a220873a7@ws01:~$ sudo systemctl --type=service | grep jimmy
+● jimmytest.service                              loaded failed failed  Jimmy python test service
+student-01-963a220873a7@ws01:~$ sudo systemctl stop jimmytest && sudo systemctl disable jimmytest
+Removed /etc/systemd/system/default.target.wants/jimmytest.service.
+student-01-963a220873a7@ws01:~$ sudo netstat -nlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      789/sshd: /usr/sbin 
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      372/systemd-resolve 
+tcp6       0      0 :::22                   :::*                    LISTEN      789/sshd: /usr/sbin 
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           372/systemd-resolve 
+udp        0      0 10.138.0.2:68           0.0.0.0:*                           369/systemd-network 
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           1294/chronyd        
+udp6       0      0 ::1:323                 :::*                                1294/chronyd        
+raw6       0      0 :::58                   :::*                    7           369/systemd-network 
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
+unix  2      [ ACC ]     STREAM     LISTENING     14843    1/init               /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     14845    1/init               /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     14846    1/init               /run/systemd/io.system.ManagedOOM
+unix  2      [ ACC ]     STREAM     LISTENING     217      1/init               /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     STREAM     LISTENING     222      1/init               /run/systemd/fsck.progress
+unix  2      [ ACC ]     STREAM     LISTENING     234      1/init               /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     237      1/init               /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     14869    117/systemd-journal  /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     15860    372/systemd-resolve  /run/systemd/resolve/io.systemd.Resolve
+unix  2      [ ACC ]     STREAM     LISTENING     17858    1/init               /var/snap/lxd/common/lxd-user/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17864    1/init               /var/snap/lxd/common/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17091    1/init               /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     17099    1/init               /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     17101    1/init               /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16197    1/init               /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     219      1/init               @/org/kernel/linux/storage/multipathd
+unix  2      [ ACC ]     STREAM     LISTENING     17098    1/init               @ISCSIADM_ABSTRACT_NAMESPACE
+student-01-963a220873a7@ws01:~$ sudo systemctl start apache2
+student-01-963a220873a7@ws01:~$ sudo systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2023-09-15 15:24:45 UTC; 8s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 3164 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 3168 (apache2)
+      Tasks: 55 (limit: 4675)
+     Memory: 7.4M
+        CPU: 77ms
+     CGroup: /system.slice/apache2.service
+             ├─3168 /usr/sbin/apache2 -k start
+             ├─3169 /usr/sbin/apache2 -k start
+             └─3170 /usr/sbin/apache2 -k start
+
+Sep 15 15:24:45 ws01 systemd[1]: Starting The Apache HTTP Server...
+Sep 15 15:24:45 ws01 systemd[1]: Started The Apache HTTP Server.
+student-01-963a220873a7@ws01:~$ 
+
+

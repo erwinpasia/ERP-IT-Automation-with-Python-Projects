@@ -1,0 +1,108 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L72163623.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72163623.pem student-01-bb56fb504d7c@35.237.160.154
+The authenticity of host '35.237.160.154 (35.237.160.154)' can't be established.
+ED25519 key fingerprint is SHA256:eJU1J/deAnTXHwbyMtqbcolt+QvLw6Bny80T5r7Xzeo.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '35.237.160.154' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-1013-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Sep 15 13:57:07 UTC 2023
+
+  System load:  0.62890625        Processes:             115
+  Usage of /:   22.0% of 9.51GB   Users logged in:       0
+  Memory usage: 9%                IPv4 address for ens4: 10.142.0.2
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+8 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Creating directory '/home/student-01-bb56fb504d7c'.
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Command 'lesspipe' is available in the following places
+ * /bin/lesspipe
+ * /usr/bin/lesspipe
+The command could not be located because '/bin:/usr/bin' is not included in the PATH environment variable.
+lesspipe: command not found
+
+
+Command 'dircolors' is available in the following places
+ * /bin/dircolors
+ * /usr/bin/dircolors
+The command could not be located because '/usr/bin:/bin' is not included in the PATH environment variable.
+dircolors: command not found
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ echo $PATH
+/java/bin:/snap/bin
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ ls /
+Command 'ls' is available in the following places
+ * /bin/ls
+ * /usr/bin/ls
+The command could not be located because '/bin:/usr/bin' is not included in the PATH environment variable.
+ls: command not found
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ export PATH=/bin:/usr/bin
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+student-01-bb56fb504d7c@puppet:~$ 
+student-01-bb56fb504d7c@puppet:~$ cd /etc/puppet/code/environments/production/modules/profile/manifests
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ 
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ 
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ sudo nano init.pp
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ sudo puppet agent -v --test
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for puppet.us-east1-c.c.qwiklabs-gcp-03-d4347058ac35.internal
+Info: Applying configuration version '1694786375'
+Notice: /Stage[main]/Profile/File[/etc/profile.d/append-path.sh]/content: 
+--- /etc/profile.d/append-path.sh	2023-09-15 13:56:49.458770999 +0000
++++ /tmp/puppet-file20230915-2811-lobvwx	2023-09-15 13:59:35.683990714 +0000
+@@ -1 +1 @@
+-PATH=/java/bin
++PATH=$PATH:/java/bin
+
+Info: Computing checksum on file /etc/profile.d/append-path.sh
+Info: /Stage[main]/Profile/File[/etc/profile.d/append-path.sh]: Filebucketed /etc/profile.d/append-path.sh to puppet with sum b1ca50e93b6ea92bd7b3eeb02c69f109
+Notice: /Stage[main]/Profile/File[/etc/profile.d/append-path.sh]/content: content changed '{md5}b1ca50e93b6ea92bd7b3eeb02c69f109' to '{md5}30a2bc8929446ce04807cd3c5921cb14'
+Notice: Applied catalog in 0.06 seconds
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ echo $PATH
+/bin:/usr/bin
+student-01-bb56fb504d7c@puppet:/etc/puppet/code/environments/production/modules/profile/manifests$ 
+
+

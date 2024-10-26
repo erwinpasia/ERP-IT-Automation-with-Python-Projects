@@ -1,0 +1,207 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71956303.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71956303.pem student-01-6624e9b1a5b3@34.41.146.117
+The authenticity of host '34.41.146.117 (34.41.146.117)' can't be established.
+ED25519 key fingerprint is SHA256:PhNlQh3IJjxHhQgbts4OkkhvLMQLDzTnnSmt2x3s89w.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.41.146.117' (ED25519) to the list of known hosts.
+Linux linux-instance 5.10.0-25-cloud-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Creating directory '/home/student-01-6624e9b1a5b3'.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ pwd
+/home/student-01-6624e9b1a5b3
+student-01-6624e9b1a5b3@linux-instance:~$ ls
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git/'
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git/'
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia          
+Password for 'https://erwinpasia@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git/'
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia
+Password for 'https://erwinpasia@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git/'
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git/'
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ git clone https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+Cloning into 'For_GITAP_PC_Github_Lab'...
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+student-01-6624e9b1a5b3@linux-instance:~$ ls
+For_GITAP_PC_Github_Lab
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ 
+student-01-6624e9b1a5b3@linux-instance:~$ cd For_GITAP_PC_Github_Lab/
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ ls
+README.md
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git config --global user.name "Name"
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git config --global user.email "user@example.com"
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ nano README.md
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git add README.md
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ 
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ 
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ 
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git commit
+[main 66901d3] I am editing the README file.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git push origin main
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+   5bc62a3..66901d3  main -> main
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git log   
+commit 66901d3aaad277c4c27ce525c7cc0bda279a660a (HEAD -> main, origin/main, origin/HEAD)
+Author: Name <user@example.com>
+Date:   Thu Sep 14 13:58:22 2023 +0000
+
+    I am editing the README file.
+
+commit 5bc62a33979b648eb0cddd73191698573de4b70f
+Author: erwinrp <78529075+erwinpasia@users.noreply.github.com>
+Date:   Fri Sep 15 01:46:57 2023 +1200
+
+    Initial commit
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ nano example.py
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git add example.py
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git commit
+Aborting commit due to empty commit message.
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ 
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git commit
+[main 3f3b972] I am editing the README file.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 example.py
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git commit
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ ls
+README.md  example.py
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git push origin main
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+To https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git pull origin main
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 709 bytes | 709.00 KiB/s, done.
+From https://github.com/erwinpasia/For_GITAP_PC_Github_Lab
+ * branch            main       -> FETCH_HEAD
+   66901d3..2a38751  main       -> origin/main
+Merge made by the 'recursive' strategy.
+ Adding_File_Thru_UI | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Adding_File_Thru_UI
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ git push origin main
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 732 bytes | 732.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/erwinpasia/For_GITAP_PC_Github_Lab.git
+   2a38751..4c6ebe6  main -> main
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ ls
+Adding_File_Thru_UI  README.md  example.py
+student-01-6624e9b1a5b3@linux-instance:~/For_GITAP_PC_Github_Lab$ 
+
+

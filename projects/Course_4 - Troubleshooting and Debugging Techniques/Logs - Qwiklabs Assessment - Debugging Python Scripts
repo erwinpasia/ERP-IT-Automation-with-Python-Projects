@@ -1,0 +1,71 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71991921.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71991921.pem student-01-0bba4eea8659@34.172.11.187
+The authenticity of host '34.172.11.187 (34.172.11.187)' can't be established.
+ED25519 key fingerprint is SHA256:F1qutoNnOXfEPNXazT6PmZiUNn/53+RzhuULUpmS4Bw.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.172.11.187' (ED25519) to the list of known hosts.
+Linux linux-instance 4.9.0-15-amd64 #1 SMP Debian 4.9.258-1 (2021-03-08) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ df -kh
+Filesystem      Size  Used Avail Use% Mounted on
+udev            2.0G     0  2.0G   0% /dev
+tmpfs           396M  6.8M  389M   2% /run
+/dev/sda1       9.8G  1.5G  7.9G  16% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ uname -a
+Linux linux-instance 4.9.0-15-amd64 #1 SMP Debian 4.9.258-1 (2021-03-08) x86_64 GNU/Linux
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ 
+student-01-0bba4eea8659@linux-instance:~$ cd ~/scripts
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ ls
+greetings.py
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ cat greetings.py
+#!/usr/bin/env python3
+
+import random
+
+def greeting():
+  name = input("Hello!, What's your name?")
+  number = random.randint(1,101)
+  print("hello " + name + ", your random number is " + number)
+
+greeting()
+student-01-0bba4eea8659@linux-instance:~/scripts$ sudo chmod 777 greetings.py
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ ./greetings.py
+Hello!, What's your name?Erwin
+Traceback (most recent call last):
+  File "./greetings.py", line 10, in <module>
+    greeting()
+  File "./greetings.py", line 8, in greeting
+    print("hello " + name + ", your random number is " + number)
+TypeError: Can't convert 'int' object to str implicitly
+student-01-0bba4eea8659@linux-instance:~/scripts$ nano greetings.py
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+student-01-0bba4eea8659@linux-instance:~/scripts$ ./greetings.py
+Hello!, What's your name?Erwin
+hello Erwin, your random number is 8
+student-01-0bba4eea8659@linux-instance:~/scripts$ 
+
+

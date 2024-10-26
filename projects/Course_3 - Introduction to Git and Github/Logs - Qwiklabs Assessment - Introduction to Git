@@ -1,0 +1,249 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71948189.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i student-01-6c5a0ec3e935@35.239.238.138
+Warning: Identity file student-01-6c5a0ec3e935@35.239.238.138 not accessible: No such file or directory.
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71948189.pem student-01-6c5a0ec3e935@35.239.238.138
+The authenticity of host '35.239.238.138 (35.239.238.138)' can't be established.
+ED25519 key fingerprint is SHA256:8ni3Om6xONEhmZs20DLttFmxxYZo484JECd00R4PEPw.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '35.239.238.138' (ED25519) to the list of known hosts.
+Linux linux-instance 5.10.0-25-cloud-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-6c5a0ec3e935@linux-instance:~$ 
+student-01-6c5a0ec3e935@linux-instance:~$ 
+student-01-6c5a0ec3e935@linux-instance:~$ pwd
+/home/student-01-6c5a0ec3e935
+student-01-6c5a0ec3e935@linux-instance:~$ ls -aslh 
+total 20K
+4.0K drwxr-xr-x 2 student-01-6c5a0ec3e935 google-sudoers 4.0K Sep 14 13:11 .
+4.0K drwxr-xr-x 3 root                    root           4.0K Sep 14 13:11 ..
+4.0K -rw-r--r-- 1 student-01-6c5a0ec3e935 google-sudoers  220 Sep 14 13:11 .bash_logout
+4.0K -rw-r--r-- 1 student-01-6c5a0ec3e935 google-sudoers 3.5K Sep 14 13:11 .bashrc
+4.0K -rw-r--r-- 1 student-01-6c5a0ec3e935 google-sudoers  807 Sep 14 13:11 .profile
+student-01-6c5a0ec3e935@linux-instance:~$ mkdir my-git-repo
+student-01-6c5a0ec3e935@linux-instance:~$ cd my-git-repo
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git init
+-bash: git: command not found
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git init
+-bash: git: command not found
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ cd
+student-01-6c5a0ec3e935@linux-instance:~$ sudo apt update
+Get:1 https://packages.cloud.google.com/apt google-compute-engine-bullseye-stable InRelease [5146 B]
+Get:2 https://packages.cloud.google.com/apt cloud-sdk-bullseye InRelease [6406 B]
+Hit:3 https://deb.debian.org/debian bullseye InRelease                        
+Get:4 https://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+Get:5 https://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+Get:6 https://deb.debian.org/debian bullseye-backports InRelease [49.0 kB]
+Get:7 https://deb.debian.org/debian-security bullseye-security/main Sources [155 kB]
+Get:8 https://deb.debian.org/debian-security bullseye-security/main amd64 Packages [246 kB]
+Fetched 554 kB in 1s (629 kB/s)                         
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+student-01-6c5a0ec3e935@linux-instance:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  git-man liberror-perl libgdbm-compat4 libperl5.32 patch perl perl-modules-5.32
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn ed diffutils-doc perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  libtap-harness-archive-perl
+The following NEW packages will be installed:
+  git git-man liberror-perl libgdbm-compat4 libperl5.32 patch perl perl-modules-5.32
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 14.8 MB of archives.
+After this operation, 85.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 https://deb.debian.org/debian bullseye/main amd64 perl-modules-5.32 all 5.32.1-4+deb11u2 [2823 kB]
+Get:2 https://deb.debian.org/debian bullseye/main amd64 libgdbm-compat4 amd64 1.19-2 [44.7 kB]
+Get:3 https://deb.debian.org/debian bullseye/main amd64 libperl5.32 amd64 5.32.1-4+deb11u2 [4106 kB]
+Get:4 https://deb.debian.org/debian bullseye/main amd64 perl amd64 5.32.1-4+deb11u2 [293 kB]
+Get:5 https://deb.debian.org/debian bullseye/main amd64 liberror-perl all 0.17029-1 [31.0 kB]
+Get:6 https://deb.debian.org/debian bullseye/main amd64 git-man all 1:2.30.2-1+deb11u2 [1828 kB]
+Get:7 https://deb.debian.org/debian bullseye/main amd64 git amd64 1:2.30.2-1+deb11u2 [5518 kB]
+Get:8 https://deb.debian.org/debian bullseye/main amd64 patch amd64 2.7.6-7 [128 kB]
+Fetched 14.8 MB in 1s (29.3 MB/s)
+apt-listchanges: Can't set locale; make sure $LC_* and $LANG are correct!
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Selecting previously unselected package perl-modules-5.32.
+(Reading database ... 58301 files and directories currently installed.)
+Preparing to unpack .../0-perl-modules-5.32_5.32.1-4+deb11u2_all.deb ...
+Unpacking perl-modules-5.32 (5.32.1-4+deb11u2) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../1-libgdbm-compat4_1.19-2_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.19-2) ...
+Selecting previously unselected package libperl5.32:amd64.
+Preparing to unpack .../2-libperl5.32_5.32.1-4+deb11u2_amd64.deb ...
+Unpacking libperl5.32:amd64 (5.32.1-4+deb11u2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../3-perl_5.32.1-4+deb11u2_amd64.deb ...
+Unpacking perl (5.32.1-4+deb11u2) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../4-liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../5-git-man_1%3a2.30.2-1+deb11u2_all.deb ...
+Unpacking git-man (1:2.30.2-1+deb11u2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../6-git_1%3a2.30.2-1+deb11u2_amd64.deb ...
+Unpacking git (1:2.30.2-1+deb11u2) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../7-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Setting up perl-modules-5.32 (5.32.1-4+deb11u2) ...
+Setting up patch (2.7.6-7) ...
+Setting up libgdbm-compat4:amd64 (1.19-2) ...
+Setting up libperl5.32:amd64 (5.32.1-4+deb11u2) ...
+Setting up git-man (1:2.30.2-1+deb11u2) ...
+Setting up perl (5.32.1-4+deb11u2) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git (1:2.30.2-1+deb11u2) ...
+Processing triggers for man-db (2.9.4-2) ...
+git --versionProcessing triggers for libc-bin (2.31-13+deb11u6) ...
+student-01-6c5a0ec3e935@linux-instance:~$ git --version
+git version 2.30.2
+student-01-6c5a0ec3e935@linux-instance:~$ cd my-git-repo
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/student-01-6c5a0ec3e935/my-git-repo/.git/
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git config --global user.name "Name"
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git config --global user.email "user@example.com"
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ nano README
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ cat README 
+This is my first repository!
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README
+
+nothing added to commit but untracked files present (use "git add" to track)
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git add README 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README
+
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git commit
+[master (root-commit) 30d4015] This is my first commit!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ nano README
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ nano README
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git diff README
+diff --git a/README b/README
+index a3aeebc..930a8de 100644
+--- a/README
++++ b/README
+@@ -1 +1,2 @@
+ This is my first repository!
++A repository is a location where all the files of a particular project are stored.
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git commit -m "This is my second commit."
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git log
+commit 30d40158fed97b1f5bfe84e959790ec63163b308 (HEAD -> master)
+Author: Name <user@example.com>
+Date:   Thu Sep 14 13:15:10 2023 +0000
+
+    This is my first commit!
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git add README 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README
+
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git commit -m "This is my second commit."
+[master d80f342] This is my second commit.
+ 1 file changed, 1 insertion(+)
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ git log
+commit d80f3422ffacdb5e76e0e6989bc05adf8e137bf7 (HEAD -> master)
+Author: Name <user@example.com>
+Date:   Thu Sep 14 13:18:08 2023 +0000
+
+    This is my second commit.
+
+commit 30d40158fed97b1f5bfe84e959790ec63163b308
+Author: Name <user@example.com>
+Date:   Thu Sep 14 13:15:10 2023 +0000
+
+    This is my first commit!
+student-01-6c5a0ec3e935@linux-instance:~/my-git-repo$ 
+
+

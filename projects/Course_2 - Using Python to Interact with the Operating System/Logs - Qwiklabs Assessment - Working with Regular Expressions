@@ -1,0 +1,286 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71539792.ppk student-01-01a5c39effae@35.196.98.106
+Load key "qwiklabs-L71539792.ppk": error in libcrypto
+student-01-01a5c39effae@35.196.98.106: Permission denied (publickey).
+(base) erwinrpasia@hp-envy15:~/Downloads$ ls -aslh qwiklabs*
+4.0K -rw-rw-r-- 1 erwinrpasia erwinrpasia 1.7K Sep 13 02:38 qwiklabs-L71539792.pem
+4.0K -rw------- 1 erwinrpasia erwinrpasia 1.5K Sep 13 02:25 qwiklabs-L71539792.ppk
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71539792.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71539792.pem student-01-01a5c39effae@35.196.98.106
+Linux linux-instance 4.9.0-15-amd64 #1 SMP Debian 4.9.258-1 (2021-03-08) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ ls -aslh 
+total 32K
+4.0K drwxr-xr-x 5 student-01-01a5c39effae student-01-01a5c39effae 4.0K Sep 12 14:25 .
+4.0K drwxr-xr-x 3 root                    root                    4.0K Sep 12 14:25 ..
+4.0K -rw-r--r-- 1 student-01-01a5c39effae student-01-01a5c39effae  220 May 15  2017 .bash_logout
+4.0K -rw-r--r-- 1 student-01-01a5c39effae student-01-01a5c39effae 3.5K May 15  2017 .bashrc
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 14:25 data
+4.0K -rw-r--r-- 1 student-01-01a5c39effae student-01-01a5c39effae  675 May 15  2017 .profile
+4.0K drwxr-xr-x 2 root                    root                    4.0K Sep 12 14:25 scripts
+4.0K drwx------ 2 student-01-01a5c39effae root                    4.0K Sep 12 14:25 .ssh
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ cd data/
+student-01-01a5c39effae@linux-instance:~/data$ ls
+user_emails.csv
+student-01-01a5c39effae@linux-instance:~/data$ 
+student-01-01a5c39effae@linux-instance:~/data$ 
+student-01-01a5c39effae@linux-instance:~/data$ cat user_emails.csv 
+Full Name, Email Address
+Blossom Gill, blossom@abc.edu
+Hayes Delgado, nonummy@utnisia.com
+Petra Jones, ac@abc.edu
+Oleg Noel, noel@liberomauris.ca
+Ahmed Miller, ahmed.miller@nequenonquam.co.uk
+Macaulay Douglas, mdouglas@abc.edu
+Aurora Grant, enim.non@abc.edu
+Madison Mcintosh, mcintosh@nisiaenean.net
+Montana Powell, montanap@semmagna.org
+Rogan Robinson, rr.robinson@abc.edu
+Simon Rivera, sri@abc.edu
+Benedict Pacheco, bpacheco@abc.edu
+Maisie Hendrix, mai.hendrix@abc.edu
+Xaviera Gould, xlg@utnisia.net
+Oren Rollins, oren@semmagna.com
+Flavia Santiago, flavia@utnisia.net
+Jackson Owens, jackowens@abc.edu
+Britanni Humphrey, britanni@ut.net
+Kirk Nixon, kirknixon@abc.edu
+Bree Campbell, breee@utnisia.net
+student-01-01a5c39effae@linux-instance:~/data$ cd ~/scripts/
+student-01-01a5c39effae@linux-instance:~/scripts$ ls
+script.py
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ cat script.py 
+#!/usr/bin/env python3
+
+#Import libraries
+
+def contains_domain(address, domain):
+  """Returns True if the email address contains the given domain,
+    in the domain position, false if not."""
+  return False
+
+def replace_domain(address, old_domain, new_domain):
+  """Replaces the old domain with the new domain in
+    the received address."""
+  return address
+
+def main():
+  """Processes the list of emails, replacing any instances of the
+    old domain with the new domain."""
+
+main()
+student-01-01a5c39effae@linux-instance:~/scripts$ vi script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ vi script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ nano script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ sudo chmod 777 script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ nano script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ ls ~/data/
+user_emails.csv
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ ls -alh ~/data/
+total 12K
+drwxrwxrwx 2 root                    root                    4.0K Sep 12 14:25 .
+drwxr-xr-x 6 student-01-01a5c39effae student-01-01a5c39effae 4.0K Sep 12 14:42 ..
+-rw-r--r-- 1 root                    root                     701 Sep 12 14:25 user_emails.csv
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ cat ~/data/user_emails.csv 
+Full Name, Email Address
+Blossom Gill, blossom@abc.edu
+Hayes Delgado, nonummy@utnisia.com
+Petra Jones, ac@abc.edu
+Oleg Noel, noel@liberomauris.ca
+Ahmed Miller, ahmed.miller@nequenonquam.co.uk
+Macaulay Douglas, mdouglas@abc.edu
+Aurora Grant, enim.non@abc.edu
+Madison Mcintosh, mcintosh@nisiaenean.net
+Montana Powell, montanap@semmagna.org
+Rogan Robinson, rr.robinson@abc.edu
+Simon Rivera, sri@abc.edu
+Benedict Pacheco, bpacheco@abc.edu
+Maisie Hendrix, mai.hendrix@abc.edu
+Xaviera Gould, xlg@utnisia.net
+Oren Rollins, oren@semmagna.com
+Flavia Santiago, flavia@utnisia.net
+Jackson Owens, jackowens@abc.edu
+Britanni Humphrey, britanni@ut.net
+Kirk Nixon, kirknixon@abc.edu
+Bree Campbell, breee@utnisia.net
+student-01-01a5c39effae@linux-instance:~/scripts$ ./script.py 
+Traceback (most recent call last):
+  File "./script.py", line 53, in <module>
+    main()
+  File "./script.py", line 29, in main
+    with open(csv_file_location, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '<csv_file_location>'
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ nano script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ ./script.py 
+Traceback (most recent call last):
+  File "./script.py", line 42, in <module>
+    main()
+  File "./script.py", line 23, in main
+    with open(csv_file_location, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '<csv_file_location>'
+student-01-01a5c39effae@linux-instance:~/scripts$ pwd
+/home/student-01-01a5c39effae/scripts
+student-01-01a5c39effae@linux-instance:~/scripts$ ls
+script.py
+student-01-01a5c39effae@linux-instance:~/scripts$ ls ../data/user_emails.csv 
+../data/user_emails.csv
+student-01-01a5c39effae@linux-instance:~/scripts$ nano script.py 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ 
+student-01-01a5c39effae@linux-instance:~/scripts$ cd
+student-01-01a5c39effae@linux-instance:~$ pwd
+/home/student-01-01a5c39effae
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ nano script.py 
+student-01-01a5c39effae@linux-instance:~$ nano ~/scripts/script.py 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ ~/scripts/script.py 
+Traceback (most recent call last):
+  File "/home/student-01-01a5c39effae/scripts/script.py", line 46, in <module>
+    main()
+  File "/home/student-01-01a5c39effae/scripts/script.py", line 41, in main
+    with open(report_file, 'w+') as output_file:
+FileNotFoundError: [Errno 2] No such file or directory: '<path_to_home_directory>/updated_user_emails.csv'
+student-01-01a5c39effae@linux-instance:~$ ls -aslh /home/student-01-01a5c39effae/data/
+total 12K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 14:25 .
+4.0K drwxr-xr-x 6 student-01-01a5c39effae student-01-01a5c39effae 4.0K Sep 12 14:56 ..
+4.0K -rw-r--r-- 1 root                    root                     701 Sep 12 14:25 user_emails.csv
+student-01-01a5c39effae@linux-instance:~$ nano ~/scripts/script.py 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ ls -aslh /home/student-01-01a5c39effae/data/
+total 12K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 14:25 .
+4.0K drwxr-xr-x 6 student-01-01a5c39effae student-01-01a5c39effae 4.0K Sep 12 14:56 ..
+4.0K -rw-r--r-- 1 root                    root                     701 Sep 12 14:25 user_emails.csv
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ ~/scripts/script.py 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ 
+student-01-01a5c39effae@linux-instance:~$ cat ~/data/user_emails.csv 
+Full Name, Email Address
+Blossom Gill, blossom@abc.edu
+Hayes Delgado, nonummy@utnisia.com
+Petra Jones, ac@abc.edu
+Oleg Noel, noel@liberomauris.ca
+Ahmed Miller, ahmed.miller@nequenonquam.co.uk
+Macaulay Douglas, mdouglas@abc.edu
+Aurora Grant, enim.non@abc.edu
+Madison Mcintosh, mcintosh@nisiaenean.net
+Montana Powell, montanap@semmagna.org
+Rogan Robinson, rr.robinson@abc.edu
+Simon Rivera, sri@abc.edu
+Benedict Pacheco, bpacheco@abc.edu
+Maisie Hendrix, mai.hendrix@abc.edu
+Xaviera Gould, xlg@utnisia.net
+Oren Rollins, oren@semmagna.com
+Flavia Santiago, flavia@utnisia.net
+Jackson Owens, jackowens@abc.edu
+Britanni Humphrey, britanni@ut.net
+Kirk Nixon, kirknixon@abc.edu
+Bree Campbell, breee@utnisia.net
+student-01-01a5c39effae@linux-instance:~$ ls -aslh /home/student-01-01a5c39effae/data/
+total 16K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 14:59 .
+4.0K drwxr-xr-x 6 student-01-01a5c39effae student-01-01a5c39effae 4.0K Sep 12 14:56 ..
+4.0K -rw-r--r-- 1 student-01-01a5c39effae student-01-01a5c39effae  722 Sep 12 14:59 updated_user_emails.csv
+4.0K -rw-r--r-- 1 root                    root                     701 Sep 12 14:25 user_emails.csv
+student-01-01a5c39effae@linux-instance:~$ cat ~/data/user_emails.csv 
+
+
+=====================================
+
+
+
+#!/usr/bin/env python3
+
+import re
+import csv
+
+def contains_domain(address, domain):
+  """Returns True if the email address contains the given,domain,in the domain position, false if not."""
+  domain = r'[\w\.-]+@'+domain+'$'
+  if re.match(domain,address):
+    return True
+  return False
+
+def replace_domain(address, old_domain, new_domain):
+  """Replaces the old domain with the new domain in the received address."""
+  old_domain_pattern = r'' + old_domain + '$'
+  address = re.sub(old_domain_pattern, new_domain, address)
+  return address
+
+def main():
+  """Processes the list of emails, replacing any instances of the old domain with the new domain."""
+  old_domain, new_domain = 'abc.edu', 'xyz.edu'
+  csv_file_location = '/home/student-01-01a5c39effae/data/user_emails.csv'
+  report_file = '/home/student-01-01a5c39effae/data' + '/updated_user_emails.csv'
+  user_email_list = []
+  old_domain_email_list = []
+  new_domain_email_list = []
+  with open(csv_file_location, 'r') as f:
+    user_data_list = list(csv.reader(f))
+    user_email_list = [data[1].strip() for data in user_data_list[1:]]
+    for email_address in user_email_list:
+      if contains_domain(email_address, old_domain):
+        old_domain_email_list.append(email_address)
+        replaced_email = replace_domain(email_address,old_domain,new_domain)
+        new_domain_email_list.append(replaced_email)
+    email_key = ' ' + 'Email Address'
+    email_index = user_data_list[0].index(email_key)
+    for user in user_data_list[1:]:
+      for old_domain, new_domain in zip(old_domain_email_list, new_domain_email_list):
+        if user[email_index] == ' ' + old_domain:
+          user[email_index] = ' ' + new_domain
+  f.close()
+  with open(report_file, 'w+') as output_file:
+    writer = csv.writer(output_file)
+    writer.writerows(user_data_list)
+    output_file.close()
+
+main()
+
+

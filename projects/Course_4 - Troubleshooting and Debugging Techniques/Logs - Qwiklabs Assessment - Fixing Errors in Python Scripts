@@ -1,0 +1,666 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71998034.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71998034.pem student-01-1c60ede789be@34.168.69.44
+The authenticity of host '34.168.69.44 (34.168.69.44)' can't be established.
+ED25519 key fingerprint is SHA256:Fq/nLKcSV/+il1RsM2gRELNDEMNnXdYciOS+AW8u1Xs.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.168.69.44' (ED25519) to the list of known hosts.
+
+
+
+Linux linux-instance 4.19.0-16-cloud-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ pwd
+/home/student-01-1c60ede789be
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ ls
+data.bak
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ cd /
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+Traceback (most recent call last):
+  File "/usr/bin/infrastructure", line 4, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+student-01-1c60ede789be@linux-instance:/$ sudo apt install python3-pip -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-pip is already the newest version (18.1-5).
+0 upgraded, 0 newly installed, 0 to remove and 91 not upgraded.
+student-01-1c60ede789be@linux-instance:/$ pip3 install matplotlib
+Defaulting to user installation because normal site-packages is not writeable
+Collecting matplotlib
+  Downloading matplotlib-3.5.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.2/11.2 MB 41.8 MB/s eta 0:00:00
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 965.4/965.4 kB 49.1 MB/s eta 0:00:00
+Collecting kiwisolver>=1.0.1 (from matplotlib)
+  Obtaining dependency information for kiwisolver>=1.0.1 from https://files.pythonhosted.org/packages/f9/77/e3046bf19720b22e3e0b7c12e28f6f2c0c18a213fb91a56cea640862270f/kiwisolver-1.4.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata
+  Downloading kiwisolver-1.4.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.4 kB)
+Collecting numpy>=1.17 (from matplotlib)
+  Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 47.1 MB/s eta 0:00:00
+Collecting packaging>=20.0 (from matplotlib)
+  Downloading packaging-23.1-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 6.2 MB/s eta 0:00:00
+Requirement already satisfied: pillow>=6.2.0 in /usr/local/lib/python3.7/dist-packages (from matplotlib) (9.5.0)
+Collecting pyparsing>=2.2.1 (from matplotlib)
+  Obtaining dependency information for pyparsing>=2.2.1 from https://files.pythonhosted.org/packages/39/92/8486ede85fcc088f1b3dba4ce92dd29d126fd96b0008ea213167940a2475/pyparsing-3.1.1-py3-none-any.whl.metadata
+  Downloading pyparsing-3.1.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib)
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 27.4 MB/s eta 0:00:00
+Collecting typing-extensions (from kiwisolver>=1.0.1->matplotlib)
+  Obtaining dependency information for typing-extensions from https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl.metadata
+  Downloading typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib) (1.12.0)
+Downloading kiwisolver-1.4.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 58.7 MB/s eta 0:00:00
+Downloading pyparsing-3.1.1-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 13.3 MB/s eta 0:00:00
+Downloading typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Installing collected packages: typing-extensions, python-dateutil, pyparsing, packaging, numpy, fonttools, cycler, kiwisolver, matplotlib
+  WARNING: The scripts f2py, f2py3 and f2py3.7 are installed in '/home/student-01-1c60ede789be/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts fonttools, pyftmerge, pyftsubset and ttx are installed in '/home/student-01-1c60ede789be/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed cycler-0.11.0 fonttools-4.38.0 kiwisolver-1.4.5 matplotlib-3.5.3 numpy-1.21.6 packaging-23.1 pyparsing-3.1.1 python-dateutil-2.8.2 typing-extensions-4.7.1
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+Scanning for data.csv...
+NoFileError: Could not find data.csv in the working directory
+student-01-1c60ede789be@linux-instance:/$ cd ~
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ ls
+data.bak
+student-01-1c60ede789be@linux-instance:~$ mv data.bak data.csv
+student-01-1c60ede789be@linux-instance:~$ cd /
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+MissingColumnError: Could not find column company in data.csv
+student-01-1c60ede789be@linux-instance:/$ cat ~/data.csv
+firstname,surname,,job title
+Oliver,Jefferson,Quam Vel Corporation,IT Resident 
+Xenos,Snow,Tellus LLC,CTO
+Emerson,Delgado,Sagittis Ltd,CFO 
+Ignatius,Henderson,Id Risus Quis Ltd, CTO
+Abel,Burnett,Dui Cum Sociis Limited,CEO 
+Dustin,Daugherty,Pharetra Corp., IT Resident 
+Thaddeus,Macdonald,Magna Nam Ligula LLP, CTO
+Guy,Chen,Dictum Eu LLP, IT Resident 
+Ulysses,Mcgowan,Aliquam Adipiscing Lacus Incorporated, CFO 
+Clinton,Ellis,Placerat Velit Limited, CTO
+Dolan,Cohen,Sed LLP, IT Resident 
+Theodore,Ford,Montes Nascetur Ridiculus Limited, IT Resident 
+Carson,Sykes,Non Dapibus PC, IT Resident 
+Ulric,Mercer,Orci Lobortis Associates,CEO 
+Jackson,Dotson,Eget Tincidunt Dui Corporation,CEO 
+Elliott,Rojas,Nec Metus Facilisis PC, CFO 
+Judah,Salinas,Orci Foundation, CTO
+Ryan,Potter,Dignissim Consulting,CEO 
+Barry,Shannon,Augue Corporation, CFO 
+Clarke,Davidson,Purus Corporation, CFO 
+Rahim,Nunez,Est Company, CFO 
+Orson,Watkins,A Purus Institute, CTO
+Jackson,Lambert,Vel Faucibus Foundation, CFO 
+Oliver,Sims,Vivamus Nibh Consulting, CTO
+Noble,Ortiz,Sit Corporation,CEO 
+Thor,Pacheco,Semper Et Inc.,CEO 
+Ivan,Gilliam,Elit Fermentum Inc., IT Resident 
+Aladdin,Forbes,Nulla Aliquet Incorporated, IT Resident 
+Jeremy,Cooley,Mauris Vel Turpis Inc., CFO 
+Cadman,Shepherd,Nunc Laoreet Lectus Ltd, CFO 
+Mark,Howe,Adipiscing Elit Corp., CFO 
+Coby,Alston,Sed Institute, CTO
+Valentine,Chaney,Eu Ligula Aenean Inc., CFO 
+Gareth,Booth,Eu LLP, IT Resident 
+Conan,Beard,Enim Consequat Purus PC, IT Resident 
+Baker,Horn,Sapien Institute, CFO 
+Davis,Baird,Lectus Sit Amet LLP, IT Resident 
+Harrison,Manning,Donec Tincidunt Company,CEO 
+Cairo,Mathis,Primis In Faucibus Corporation, CTO
+Grady,Erickson,Etiam Gravida Molestie Corporation, CFO 
+Marsden,Holman,Elit Pellentesque Industries, IT Resident 
+Malcolm,Lane,Lorem Ipsum Dolor Corporation, CTO
+Quamar,Nguyen,Eu Euismod Ac Corp.,CEO 
+Yuli,Elliott,Elementum Incorporated, CTO
+Flynn,Fuller,Primis Consulting, CTO
+Raphael,Mcintyre,Semper LLC, IT Resident 
+Ralph,West,At Augue Industries, CTO
+Baxter,Dillon,Commodo At Foundation, IT Resident 
+Hector,Carpenter,Quisque Nonummy Corp., CTO
+Uriah,Austin,Vulputate Dui Nec Industries,CEO 
+Benedict,Ballard,Turpis Associates, CFO 
+Wang,Little,Ac PC, CFO 
+Brendan,Reid,Placerat Inc., CTO
+Kyle,Gould,Fusce Aliquet Magna Consulting, IT Resident 
+Giacomo,Salinas,Magna Duis Dignissim Company, IT Resident 
+Wade,Bullock,Tristique Senectus LLP, IT Resident 
+Abdul,Gibbs,Duis At Lacus PC, CTO
+Devin,Obrien,Neque In Ltd,CEO 
+Jerome,Gibson,Eu Ligula Aenean Foundation, CFO 
+Lance,Medina,Libero Proin Mi Company, CTO
+Gannon,Harrison,Vulputate Dui Foundation, CFO 
+Todd,Barron,Nunc LLP, CFO 
+Oleg,Banks,Vel Mauris Institute,CEO 
+David,Cline,Nunc Foundation, CTO
+Todd,Vaughan,Eu Corporation,CEO 
+Byron,Fry,Consectetuer Corporation, CFO 
+Joseph,Sears,Dictum Corporation, CTO
+Ira,Wiggins,Eu Enim Incorporated, CTO
+Kirk,Davis,Dictum Mi Consulting,CEO 
+Darius,Owens,Purus In Molestie PC, CFO 
+Acton,Hooper,Ipsum Leo Elementum Limited,CEO 
+Fulton,Dodson,Gravida Mauris Ut Foundation,CEO 
+Tanek,Sloan,Scelerisque Sed Sapien Industries,CEO 
+Calvin,Page,Etiam Ligula LLP, IT Resident 
+Amal,Hinton,Urna Inc.,CEO 
+Lev,Key,Eu Incorporated,CEO 
+Tobias,Sandoval,Non Corp., CTO
+Erich,Lynn,Vitae Orci Corporation, IT Resident 
+Zeph,Holland,Semper Nam Tempor Foundation,CEO 
+Chaney,Simmons,Venenatis Lacus Etiam Foundation, CTO
+Clarke,Albert,Pellentesque A Facilisis Corporation,CEO 
+Raphael,Hoffman,Lobortis Quam A Company, IT Resident 
+Cain,Mckay,Varius Et Euismod Foundation,CEO 
+Harper,Rivera,Nisi Inc.,CEO 
+Arden,Ayala,Vel Pede Blandit Incorporated,CEO 
+Cruz,Gutierrez,A Limited,CEO 
+Basil,Wyatt,At Pede Cras Ltd, CFO 
+Wesley,Lamb,Pulvinar Limited, CFO 
+Barry,Perkins,Donec Inc.,CEO 
+Zane,Deleon,Mauris Aliquam Eu Ltd, CTO
+Isaac,Maddox,Felis Nulla Industries,CEO 
+Guy,Shaw,Sit Amet Faucibus PC,CEO 
+Kasimir,Walters,Aliquam Associates, IT Resident 
+Aaron,Burt,A Dui Limited, CFO 
+Martin,Salazar,Odio Nam Company, CTO
+Brock,Lindsey,Tristique Institute,CEO 
+Lee,Collier,Pede Consulting,CEO 
+Grant,Morin,Donec Tempus Institute, IT Resident 
+Griffin,Jones,Donec Egestas Foundation, IT Resident 
+Ulric,Bradshaw,At Nisi LLC, CFO 
+student-01-1c60ede789be@linux-instance:/$ sudo chmod 777 ~/data.csv
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ nano ~/data.csv
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ nano ~/data.csv
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+Traceback (most recent call last):
+  File "/usr/bin/infrastructure", line 23, in <module>
+    csv_data = np.genfromtxt(f,delimiter=',',dtype=str)
+  File "/home/student-01-1c60ede789be/.local/lib/python3.7/site-packages/numpy/lib/npyio.py", line 2124, in genfromtxt
+    raise ValueError(errmsg)
+ValueError: Some errors were detected !
+    Line #2 (got 2 columns instead of 3)
+    Line #3 (got 4 columns instead of 3)
+    Line #4 (got 4 columns instead of 3)
+    Line #5 (got 4 columns instead of 3)
+    Line #6 (got 4 columns instead of 3)
+    Line #7 (got 4 columns instead of 3)
+    Line #8 (got 4 columns instead of 3)
+    Line #9 (got 4 columns instead of 3)
+    Line #10 (got 4 columns instead of 3)
+    Line #11 (got 4 columns instead of 3)
+    Line #12 (got 4 columns instead of 3)
+    Line #13 (got 4 columns instead of 3)
+    Line #14 (got 4 columns instead of 3)
+    Line #15 (got 4 columns instead of 3)
+    Line #16 (got 4 columns instead of 3)
+    Line #17 (got 4 columns instead of 3)
+    Line #18 (got 4 columns instead of 3)
+    Line #19 (got 4 columns instead of 3)
+    Line #20 (got 4 columns instead of 3)
+    Line #21 (got 4 columns instead of 3)
+    Line #22 (got 4 columns instead of 3)
+    Line #23 (got 4 columns instead of 3)
+    Line #24 (got 4 columns instead of 3)
+    Line #25 (got 4 columns instead of 3)
+    Line #26 (got 4 columns instead of 3)
+    Line #27 (got 4 columns instead of 3)
+    Line #28 (got 4 columns instead of 3)
+    Line #29 (got 4 columns instead of 3)
+    Line #30 (got 4 columns instead of 3)
+    Line #31 (got 4 columns instead of 3)
+    Line #32 (got 4 columns instead of 3)
+    Line #33 (got 4 columns instead of 3)
+    Line #34 (got 4 columns instead of 3)
+    Line #35 (got 4 columns instead of 3)
+    Line #36 (got 4 columns instead of 3)
+    Line #37 (got 4 columns instead of 3)
+    Line #38 (got 4 columns instead of 3)
+    Line #39 (got 4 columns instead of 3)
+    Line #40 (got 4 columns instead of 3)
+    Line #41 (got 4 columns instead of 3)
+    Line #42 (got 4 columns instead of 3)
+    Line #43 (got 4 columns instead of 3)
+    Line #44 (got 4 columns instead of 3)
+    Line #45 (got 4 columns instead of 3)
+    Line #46 (got 4 columns instead of 3)
+    Line #47 (got 4 columns instead of 3)
+    Line #48 (got 4 columns instead of 3)
+    Line #49 (got 4 columns instead of 3)
+    Line #50 (got 4 columns instead of 3)
+    Line #51 (got 4 columns instead of 3)
+    Line #52 (got 4 columns instead of 3)
+    Line #53 (got 4 columns instead of 3)
+    Line #54 (got 4 columns instead of 3)
+    Line #55 (got 4 columns instead of 3)
+    Line #56 (got 4 columns instead of 3)
+    Line #57 (got 4 columns instead of 3)
+    Line #58 (got 4 columns instead of 3)
+    Line #59 (got 4 columns instead of 3)
+    Line #60 (got 4 columns instead of 3)
+    Line #61 (got 4 columns instead of 3)
+    Line #62 (got 4 columns instead of 3)
+    Line #63 (got 4 columns instead of 3)
+    Line #64 (got 4 columns instead of 3)
+    Line #65 (got 4 columns instead of 3)
+    Line #66 (got 4 columns instead of 3)
+    Line #67 (got 4 columns instead of 3)
+    Line #68 (got 4 columns instead of 3)
+    Line #69 (got 4 columns instead of 3)
+    Line #70 (got 4 columns instead of 3)
+    Line #71 (got 4 columns instead of 3)
+    Line #72 (got 4 columns instead of 3)
+    Line #73 (got 4 columns instead of 3)
+    Line #74 (got 4 columns instead of 3)
+    Line #75 (got 4 columns instead of 3)
+    Line #76 (got 4 columns instead of 3)
+    Line #77 (got 4 columns instead of 3)
+    Line #78 (got 4 columns instead of 3)
+    Line #79 (got 4 columns instead of 3)
+    Line #80 (got 4 columns instead of 3)
+    Line #81 (got 4 columns instead of 3)
+    Line #82 (got 4 columns instead of 3)
+    Line #83 (got 4 columns instead of 3)
+    Line #84 (got 4 columns instead of 3)
+    Line #85 (got 4 columns instead of 3)
+    Line #86 (got 4 columns instead of 3)
+    Line #87 (got 4 columns instead of 3)
+    Line #88 (got 4 columns instead of 3)
+    Line #89 (got 4 columns instead of 3)
+    Line #90 (got 4 columns instead of 3)
+    Line #91 (got 4 columns instead of 3)
+    Line #92 (got 4 columns instead of 3)
+    Line #93 (got 4 columns instead of 3)
+    Line #94 (got 4 columns instead of 3)
+    Line #95 (got 4 columns instead of 3)
+    Line #96 (got 4 columns instead of 3)
+    Line #97 (got 4 columns instead of 3)
+    Line #98 (got 4 columns instead of 3)
+    Line #99 (got 4 columns instead of 3)
+    Line #100 (got 4 columns instead of 3)
+    Line #101 (got 4 columns instead of 3)
+    Line #102 (got 4 columns instead of 3)
+student-01-1c60ede789be@linux-instance:/$ pwd
+/
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+Traceback (most recent call last):
+  File "/usr/bin/infrastructure", line 23, in <module>
+    csv_data = np.genfromtxt(f,delimiter=',',dtype=str)
+  File "/home/student-01-1c60ede789be/.local/lib/python3.7/site-packages/numpy/lib/npyio.py", line 2124, in genfromtxt
+    raise ValueError(errmsg)
+ValueError: Some errors were detected !
+    Line #2 (got 2 columns instead of 3)
+    Line #3 (got 4 columns instead of 3)
+    Line #4 (got 4 columns instead of 3)
+    Line #5 (got 4 columns instead of 3)
+    Line #6 (got 4 columns instead of 3)
+    Line #7 (got 4 columns instead of 3)
+    Line #8 (got 4 columns instead of 3)
+    Line #9 (got 4 columns instead of 3)
+    Line #10 (got 4 columns instead of 3)
+    Line #11 (got 4 columns instead of 3)
+    Line #12 (got 4 columns instead of 3)
+    Line #13 (got 4 columns instead of 3)
+    Line #14 (got 4 columns instead of 3)
+    Line #15 (got 4 columns instead of 3)
+    Line #16 (got 4 columns instead of 3)
+    Line #17 (got 4 columns instead of 3)
+    Line #18 (got 4 columns instead of 3)
+    Line #19 (got 4 columns instead of 3)
+    Line #20 (got 4 columns instead of 3)
+    Line #21 (got 4 columns instead of 3)
+    Line #22 (got 4 columns instead of 3)
+    Line #23 (got 4 columns instead of 3)
+    Line #24 (got 4 columns instead of 3)
+    Line #25 (got 4 columns instead of 3)
+    Line #26 (got 4 columns instead of 3)
+    Line #27 (got 4 columns instead of 3)
+    Line #28 (got 4 columns instead of 3)
+    Line #29 (got 4 columns instead of 3)
+    Line #30 (got 4 columns instead of 3)
+    Line #31 (got 4 columns instead of 3)
+    Line #32 (got 4 columns instead of 3)
+    Line #33 (got 4 columns instead of 3)
+    Line #34 (got 4 columns instead of 3)
+    Line #35 (got 4 columns instead of 3)
+    Line #36 (got 4 columns instead of 3)
+    Line #37 (got 4 columns instead of 3)
+    Line #38 (got 4 columns instead of 3)
+    Line #39 (got 4 columns instead of 3)
+    Line #40 (got 4 columns instead of 3)
+    Line #41 (got 4 columns instead of 3)
+    Line #42 (got 4 columns instead of 3)
+    Line #43 (got 4 columns instead of 3)
+    Line #44 (got 4 columns instead of 3)
+    Line #45 (got 4 columns instead of 3)
+    Line #46 (got 4 columns instead of 3)
+    Line #47 (got 4 columns instead of 3)
+    Line #48 (got 4 columns instead of 3)
+    Line #49 (got 4 columns instead of 3)
+    Line #50 (got 4 columns instead of 3)
+    Line #51 (got 4 columns instead of 3)
+    Line #52 (got 4 columns instead of 3)
+    Line #53 (got 4 columns instead of 3)
+    Line #54 (got 4 columns instead of 3)
+    Line #55 (got 4 columns instead of 3)
+    Line #56 (got 4 columns instead of 3)
+    Line #57 (got 4 columns instead of 3)
+    Line #58 (got 4 columns instead of 3)
+    Line #59 (got 4 columns instead of 3)
+    Line #60 (got 4 columns instead of 3)
+    Line #61 (got 4 columns instead of 3)
+    Line #62 (got 4 columns instead of 3)
+    Line #63 (got 4 columns instead of 3)
+    Line #64 (got 4 columns instead of 3)
+    Line #65 (got 4 columns instead of 3)
+    Line #66 (got 4 columns instead of 3)
+    Line #67 (got 4 columns instead of 3)
+    Line #68 (got 4 columns instead of 3)
+    Line #69 (got 4 columns instead of 3)
+    Line #70 (got 4 columns instead of 3)
+    Line #71 (got 4 columns instead of 3)
+    Line #72 (got 4 columns instead of 3)
+    Line #73 (got 4 columns instead of 3)
+    Line #74 (got 4 columns instead of 3)
+    Line #75 (got 4 columns instead of 3)
+    Line #76 (got 4 columns instead of 3)
+    Line #77 (got 4 columns instead of 3)
+    Line #78 (got 4 columns instead of 3)
+    Line #79 (got 4 columns instead of 3)
+    Line #80 (got 4 columns instead of 3)
+    Line #81 (got 4 columns instead of 3)
+    Line #82 (got 4 columns instead of 3)
+    Line #83 (got 4 columns instead of 3)
+    Line #84 (got 4 columns instead of 3)
+    Line #85 (got 4 columns instead of 3)
+    Line #86 (got 4 columns instead of 3)
+    Line #87 (got 4 columns instead of 3)
+    Line #88 (got 4 columns instead of 3)
+    Line #89 (got 4 columns instead of 3)
+    Line #90 (got 4 columns instead of 3)
+    Line #91 (got 4 columns instead of 3)
+    Line #92 (got 4 columns instead of 3)
+    Line #93 (got 4 columns instead of 3)
+    Line #94 (got 4 columns instead of 3)
+    Line #95 (got 4 columns instead of 3)
+    Line #96 (got 4 columns instead of 3)
+    Line #97 (got 4 columns instead of 3)
+    Line #98 (got 4 columns instead of 3)
+    Line #99 (got 4 columns instead of 3)
+    Line #100 (got 4 columns instead of 3)
+    Line #101 (got 4 columns instead of 3)
+    Line #102 (got 4 columns instead of 3)
+student-01-1c60ede789be@linux-instance:/$ cd ~
+student-01-1c60ede789be@linux-instance:~$ 
+student-01-1c60ede789be@linux-instance:~$ ls
+data.csv
+student-01-1c60ede789be@linux-instance:~$ cd /
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+Traceback (most recent call last):
+  File "/usr/bin/infrastructure", line 23, in <module>
+    csv_data = np.genfromtxt(f,delimiter=',',dtype=str)
+  File "/home/student-01-1c60ede789be/.local/lib/python3.7/site-packages/numpy/lib/npyio.py", line 2124, in genfromtxt
+    raise ValueError(errmsg)
+ValueError: Some errors were detected !
+    Line #2 (got 2 columns instead of 3)
+    Line #3 (got 4 columns instead of 3)
+    Line #4 (got 4 columns instead of 3)
+    Line #5 (got 4 columns instead of 3)
+    Line #6 (got 4 columns instead of 3)
+    Line #7 (got 4 columns instead of 3)
+    Line #8 (got 4 columns instead of 3)
+    Line #9 (got 4 columns instead of 3)
+    Line #10 (got 4 columns instead of 3)
+    Line #11 (got 4 columns instead of 3)
+    Line #12 (got 4 columns instead of 3)
+    Line #13 (got 4 columns instead of 3)
+    Line #14 (got 4 columns instead of 3)
+    Line #15 (got 4 columns instead of 3)
+    Line #16 (got 4 columns instead of 3)
+    Line #17 (got 4 columns instead of 3)
+    Line #18 (got 4 columns instead of 3)
+    Line #19 (got 4 columns instead of 3)
+    Line #20 (got 4 columns instead of 3)
+    Line #21 (got 4 columns instead of 3)
+    Line #22 (got 4 columns instead of 3)
+    Line #23 (got 4 columns instead of 3)
+    Line #24 (got 4 columns instead of 3)
+    Line #25 (got 4 columns instead of 3)
+    Line #26 (got 4 columns instead of 3)
+    Line #27 (got 4 columns instead of 3)
+    Line #28 (got 4 columns instead of 3)
+    Line #29 (got 4 columns instead of 3)
+    Line #30 (got 4 columns instead of 3)
+    Line #31 (got 4 columns instead of 3)
+    Line #32 (got 4 columns instead of 3)
+    Line #33 (got 4 columns instead of 3)
+    Line #34 (got 4 columns instead of 3)
+    Line #35 (got 4 columns instead of 3)
+    Line #36 (got 4 columns instead of 3)
+    Line #37 (got 4 columns instead of 3)
+    Line #38 (got 4 columns instead of 3)
+    Line #39 (got 4 columns instead of 3)
+    Line #40 (got 4 columns instead of 3)
+    Line #41 (got 4 columns instead of 3)
+    Line #42 (got 4 columns instead of 3)
+    Line #43 (got 4 columns instead of 3)
+    Line #44 (got 4 columns instead of 3)
+    Line #45 (got 4 columns instead of 3)
+    Line #46 (got 4 columns instead of 3)
+    Line #47 (got 4 columns instead of 3)
+    Line #48 (got 4 columns instead of 3)
+    Line #49 (got 4 columns instead of 3)
+    Line #50 (got 4 columns instead of 3)
+    Line #51 (got 4 columns instead of 3)
+    Line #52 (got 4 columns instead of 3)
+    Line #53 (got 4 columns instead of 3)
+    Line #54 (got 4 columns instead of 3)
+    Line #55 (got 4 columns instead of 3)
+    Line #56 (got 4 columns instead of 3)
+    Line #57 (got 4 columns instead of 3)
+    Line #58 (got 4 columns instead of 3)
+    Line #59 (got 4 columns instead of 3)
+    Line #60 (got 4 columns instead of 3)
+    Line #61 (got 4 columns instead of 3)
+    Line #62 (got 4 columns instead of 3)
+    Line #63 (got 4 columns instead of 3)
+    Line #64 (got 4 columns instead of 3)
+    Line #65 (got 4 columns instead of 3)
+    Line #66 (got 4 columns instead of 3)
+    Line #67 (got 4 columns instead of 3)
+    Line #68 (got 4 columns instead of 3)
+    Line #69 (got 4 columns instead of 3)
+    Line #70 (got 4 columns instead of 3)
+    Line #71 (got 4 columns instead of 3)
+    Line #72 (got 4 columns instead of 3)
+    Line #73 (got 4 columns instead of 3)
+    Line #74 (got 4 columns instead of 3)
+    Line #75 (got 4 columns instead of 3)
+    Line #76 (got 4 columns instead of 3)
+    Line #77 (got 4 columns instead of 3)
+    Line #78 (got 4 columns instead of 3)
+    Line #79 (got 4 columns instead of 3)
+    Line #80 (got 4 columns instead of 3)
+    Line #81 (got 4 columns instead of 3)
+    Line #82 (got 4 columns instead of 3)
+    Line #83 (got 4 columns instead of 3)
+    Line #84 (got 4 columns instead of 3)
+    Line #85 (got 4 columns instead of 3)
+    Line #86 (got 4 columns instead of 3)
+    Line #87 (got 4 columns instead of 3)
+    Line #88 (got 4 columns instead of 3)
+    Line #89 (got 4 columns instead of 3)
+    Line #90 (got 4 columns instead of 3)
+    Line #91 (got 4 columns instead of 3)
+    Line #92 (got 4 columns instead of 3)
+    Line #93 (got 4 columns instead of 3)
+    Line #94 (got 4 columns instead of 3)
+    Line #95 (got 4 columns instead of 3)
+    Line #96 (got 4 columns instead of 3)
+    Line #97 (got 4 columns instead of 3)
+    Line #98 (got 4 columns instead of 3)
+    Line #99 (got 4 columns instead of 3)
+    Line #100 (got 4 columns instead of 3)
+    Line #101 (got 4 columns instead of 3)
+    Line #102 (got 4 columns instead of 3)
+student-01-1c60ede789be@linux-instance:/$ cat ~/data.csv 
+firstname,surname,O
+name,job title
+Oliver,Jefferson,Quam Vel Corporation,IT Resident 
+Xenos,Snow,Tellus LLC,CTO
+Emerson,Delgado,Sagittis Ltd,CFO 
+Ignatius,Henderson,Id Risus Quis Ltd, CTO
+Abel,Burnett,Dui Cum Sociis Limited,CEO 
+Dustin,Daugherty,Pharetra Corp., IT Resident 
+Thaddeus,Macdonald,Magna Nam Ligula LLP, CTO
+Guy,Chen,Dictum Eu LLP, IT Resident 
+Ulysses,Mcgowan,Aliquam Adipiscing Lacus Incorporated, CFO 
+Clinton,Ellis,Placerat Velit Limited, CTO
+Dolan,Cohen,Sed LLP, IT Resident 
+Theodore,Ford,Montes Nascetur Ridiculus Limited, IT Resident 
+Carson,Sykes,Non Dapibus PC, IT Resident 
+Ulric,Mercer,Orci Lobortis Associates,CEO 
+Jackson,Dotson,Eget Tincidunt Dui Corporation,CEO 
+Elliott,Rojas,Nec Metus Facilisis PC, CFO 
+Judah,Salinas,Orci Foundation, CTO
+Ryan,Potter,Dignissim Consulting,CEO 
+Barry,Shannon,Augue Corporation, CFO 
+Clarke,Davidson,Purus Corporation, CFO 
+Rahim,Nunez,Est Company, CFO 
+Orson,Watkins,A Purus Institute, CTO
+Jackson,Lambert,Vel Faucibus Foundation, CFO 
+Oliver,Sims,Vivamus Nibh Consulting, CTO
+Noble,Ortiz,Sit Corporation,CEO 
+Thor,Pacheco,Semper Et Inc.,CEO 
+Ivan,Gilliam,Elit Fermentum Inc., IT Resident 
+Aladdin,Forbes,Nulla Aliquet Incorporated, IT Resident 
+Jeremy,Cooley,Mauris Vel Turpis Inc., CFO 
+Cadman,Shepherd,Nunc Laoreet Lectus Ltd, CFO 
+Mark,Howe,Adipiscing Elit Corp., CFO 
+Coby,Alston,Sed Institute, CTO
+Valentine,Chaney,Eu Ligula Aenean Inc., CFO 
+Gareth,Booth,Eu LLP, IT Resident 
+Conan,Beard,Enim Consequat Purus PC, IT Resident 
+Baker,Horn,Sapien Institute, CFO 
+Davis,Baird,Lectus Sit Amet LLP, IT Resident 
+Harrison,Manning,Donec Tincidunt Company,CEO 
+Cairo,Mathis,Primis In Faucibus Corporation, CTO
+Grady,Erickson,Etiam Gravida Molestie Corporation, CFO 
+Marsden,Holman,Elit Pellentesque Industries, IT Resident 
+Malcolm,Lane,Lorem Ipsum Dolor Corporation, CTO
+Quamar,Nguyen,Eu Euismod Ac Corp.,CEO 
+Yuli,Elliott,Elementum Incorporated, CTO
+Flynn,Fuller,Primis Consulting, CTO
+Raphael,Mcintyre,Semper LLC, IT Resident 
+Ralph,West,At Augue Industries, CTO
+Baxter,Dillon,Commodo At Foundation, IT Resident 
+Hector,Carpenter,Quisque Nonummy Corp., CTO
+Uriah,Austin,Vulputate Dui Nec Industries,CEO 
+Benedict,Ballard,Turpis Associates, CFO 
+Wang,Little,Ac PC, CFO 
+Brendan,Reid,Placerat Inc., CTO
+Kyle,Gould,Fusce Aliquet Magna Consulting, IT Resident 
+Giacomo,Salinas,Magna Duis Dignissim Company, IT Resident 
+Wade,Bullock,Tristique Senectus LLP, IT Resident 
+Abdul,Gibbs,Duis At Lacus PC, CTO
+Devin,Obrien,Neque In Ltd,CEO 
+Jerome,Gibson,Eu Ligula Aenean Foundation, CFO 
+Lance,Medina,Libero Proin Mi Company, CTO
+Gannon,Harrison,Vulputate Dui Foundation, CFO 
+Todd,Barron,Nunc LLP, CFO 
+Oleg,Banks,Vel Mauris Institute,CEO 
+David,Cline,Nunc Foundation, CTO
+Todd,Vaughan,Eu Corporation,CEO 
+Byron,Fry,Consectetuer Corporation, CFO 
+Joseph,Sears,Dictum Corporation, CTO
+Ira,Wiggins,Eu Enim Incorporated, CTO
+Kirk,Davis,Dictum Mi Consulting,CEO 
+Darius,Owens,Purus In Molestie PC, CFO 
+Acton,Hooper,Ipsum Leo Elementum Limited,CEO 
+Fulton,Dodson,Gravida Mauris Ut Foundation,CEO 
+Tanek,Sloan,Scelerisque Sed Sapien Industries,CEO 
+Calvin,Page,Etiam Ligula LLP, IT Resident 
+Amal,Hinton,Urna Inc.,CEO 
+Lev,Key,Eu Incorporated,CEO 
+Tobias,Sandoval,Non Corp., CTO
+Erich,Lynn,Vitae Orci Corporation, IT Resident 
+Zeph,Holland,Semper Nam Tempor Foundation,CEO 
+Chaney,Simmons,Venenatis Lacus Etiam Foundation, CTO
+Clarke,Albert,Pellentesque A Facilisis Corporation,CEO 
+Raphael,Hoffman,Lobortis Quam A Company, IT Resident 
+Cain,Mckay,Varius Et Euismod Foundation,CEO 
+Harper,Rivera,Nisi Inc.,CEO 
+Arden,Ayala,Vel Pede Blandit Incorporated,CEO 
+Cruz,Gutierrez,A Limited,CEO 
+Basil,Wyatt,At Pede Cras Ltd, CFO 
+Wesley,Lamb,Pulvinar Limited, CFO 
+Barry,Perkins,Donec Inc.,CEO 
+Zane,Deleon,Mauris Aliquam Eu Ltd, CTO
+Isaac,Maddox,Felis Nulla Industries,CEO 
+Guy,Shaw,Sit Amet Faucibus PC,CEO 
+Kasimir,Walters,Aliquam Associates, IT Resident 
+Aaron,Burt,A Dui Limited, CFO 
+Martin,Salazar,Odio Nam Company, CTO
+Brock,Lindsey,Tristique Institute,CEO 
+Lee,Collier,Pede Consulting,CEO 
+Grant,Morin,Donec Tempus Institute, IT Resident 
+Griffin,Jones,Donec Egestas Foundation, IT Resident 
+Ulric,Bradshaw,At Nisi LLC, CFO 
+student-01-1c60ede789be@linux-instance:/$ nano ~/data.csv 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+MissingColumnError: Could not find column company in data.csv
+student-01-1c60ede789be@linux-instance:/$ nano ~/data.csv 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ 
+student-01-1c60ede789be@linux-instance:/$ python3 /usr/bin/infrastructure
+student-01-1c60ede789be@linux-instance:/$ 
+
+

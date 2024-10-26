@@ -1,0 +1,144 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72198674.pem 
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72198674.pem student-01-7bc1580e43df@34.125.220.34
+Linux linux-instance 4.19.0-16-cloud-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Sep 15 16:39:26 2023 from 45.146.54.27
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-7bc1580e43df@linux-instance:~$ ls
+download_drive_file.sh  example_upload.py
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/download_drive_file.sh
+student-01-7bc1580e43df@linux-instance:~$ ./download_drive_file.sh 1LePo57dJcgzoK4uiI_48S01Etck7w_5f supplier-data.tar.gz
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+--2023-09-15 16:40:38--  https://docs.google.com/uc?export=download&confirm=t&id=1LePo57dJcgzoK4uiI_48S01Etck7w_5f
+Resolving docs.google.com (docs.google.com)... 142.251.2.139, 142.251.2.100, 142.251.2.113, ...
+Connecting to docs.google.com (docs.google.com)|142.251.2.139|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://doc-00-1o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ah3aj1fjgu4e2s5q7uji1jrmgk2tlnvq/1694796000000/14227514949285994461/*/1LePo57dJcgzoK4uiI_48S01Etck7w_5f?e=download&uuid=d637f4d8-892b-40be-a4dc-90dd387ace2a [following]
+Warning: wildcards not supported in HTTP.
+--2023-09-15 16:40:38--  https://doc-00-1o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ah3aj1fjgu4e2s5q7uji1jrmgk2tlnvq/1694796000000/14227514949285994461/*/1LePo57dJcgzoK4uiI_48S01Etck7w_5f?e=download&uuid=d637f4d8-892b-40be-a4dc-90dd387ace2a
+Resolving doc-00-1o-docs.googleusercontent.com (doc-00-1o-docs.googleusercontent.com)... 142.251.2.132, 2607:f8b0:4023:c0d::84
+Connecting to doc-00-1o-docs.googleusercontent.com (doc-00-1o-docs.googleusercontent.com)|142.251.2.132|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 88653399 (85M) [application/gzip]
+Saving to: 'supplier-data.tar.gz'
+
+supplier-data.tar.gz                                 100%[===================================================================================================================>]  84.55M   106MB/s    in 0.8s    
+
+2023-09-15 16:40:39 (106 MB/s) - 'supplier-data.tar.gz' saved [88653399/88653399]
+
+student-01-7bc1580e43df@linux-instance:~$ tar xf ~/supplier-data.tar.gz
+student-01-7bc1580e43df@linux-instance:~$ ls ~/supplier-data
+descriptions  images
+student-01-7bc1580e43df@linux-instance:~$ cat ~/supplier-data/descriptions/007.txt
+Mango
+300 lbs
+Mango contains higher levels of vitamin C than ordinary fruits. Eating mango can also reduce cholesterol and triglycerides, and help prevent cardiovascular disease. Due to its high level of vitamins, regular consumption of mango play an important role in improving body function and moisturizing the skin.
+student-01-7bc1580e43df@linux-instance:~$ nano ~/changeImage.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/changeImage.py
+student-01-7bc1580e43df@linux-instance:~$ ./changeImage.py
+student-01-7bc1580e43df@linux-instance:~$ file ~/supplier-data/images/003.jpeg
+/home/student-01-7bc1580e43df/supplier-data/images/003.jpeg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 600x400, components 3
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ cat ~/example_upload.py
+#!/usr/bin/env python3
+import requests
+
+# This example shows how a file can be uploaded using
+# The Python Requests module
+
+url = "http://localhost/upload/"
+with open('/usr/share/apache2/icons/icon.sheet.png', 'rb') as opened:
+    r = requests.post(url, files={'file': opened})
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/example_upload.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ ./example_upload.py
+student-01-7bc1580e43df@linux-instance:~$ nano ~/supplier_image_upload.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/supplier_image_upload.py
+student-01-7bc1580e43df@linux-instance:~$ ./supplier_image_upload.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ nano ~/run.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/run.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ ./run.py 
+Created feedback ID: 2
+Created feedback ID: 3
+Created feedback ID: 4
+Created feedback ID: 5
+Created feedback ID: 6
+Created feedback ID: 7
+Created feedback ID: 8
+Created feedback ID: 9
+Created feedback ID: 10
+Created feedback ID: 11
+student-01-7bc1580e43df@linux-instance:~$ nano ~/reports.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ nano ~/report_email.py
+student-01-7bc1580e43df@linux-instance:~$ nano ~/emails.py
+student-01-7bc1580e43df@linux-instance:~$ ls
+changeImage.py  download_drive_file.sh  example_upload.py  report_email.py  reports.py  run.py  supplier-data  supplier-data.tar.gz  supplier_image_upload.py
+student-01-7bc1580e43df@linux-instance:~$ nano ~/emails.py      
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/report_email.py
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ ./report_email.py
+student-01-7bc1580e43df@linux-instance:~$ nano ~/health_check.py
+You have mail in /var/mail/student-01-7bc1580e43df
+student-01-7bc1580e43df@linux-instance:~$ 
+student-01-7bc1580e43df@linux-instance:~$ sudo chmod +x ~/health_check.py
+student-01-7bc1580e43df@linux-instance:~$ ./health_check.py
+student-01-7bc1580e43df@linux-instance:~$ sudo apt install stress
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  stress
+0 upgraded, 1 newly installed, 0 to remove and 89 not upgraded.
+Need to get 21.8 kB of archives.
+After this operation, 55.3 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 stress amd64 1.0.4-4 [21.8 kB]
+Fetched 21.8 kB in 0s (127 kB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Selecting previously unselected package stress.
+(Reading database ... 58512 files and directories currently installed.)
+Preparing to unpack .../stress_1.0.4-4_amd64.deb ...
+Unpacking stress (1.0.4-4) ...
+Setting up stress (1.0.4-4) ...
+Processing triggers for man-db (2.8.5-2) ...
+student-01-7bc1580e43df@linux-instance:~$ stress --cpu 8
+stress: info: [28514] dispatching hogs: 8 cpu, 0 io, 0 vm, 0 hdd
+
+
+
+
+
+
+
+
+

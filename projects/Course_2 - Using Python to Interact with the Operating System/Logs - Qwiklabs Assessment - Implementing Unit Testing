@@ -1,0 +1,420 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71552491.pem student-01-c85a3cfab519@34.168.15.193
+The authenticity of host '34.168.15.193 (34.168.15.193)' can't be established.
+ED25519 key fingerprint is SHA256:ut88o0C0TeOiNXaKGf4f4XBVblyi05Djz/vBv6q8iIQ.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.168.15.193' (ED25519) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0775 for 'qwiklabs-L71552491.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "qwiklabs-L71552491.pem": bad permissions
+student-01-c85a3cfab519@34.168.15.193: Permission denied (publickey).
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71552491.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71552491.pem student-01-c85a3cfab519@34.168.15.193
+Linux linux-instance 4.9.0-15-amd64 #1 SMP Debian 4.9.258-1 (2021-03-08) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ls
+data  scripts
+student-01-c85a3cfab519@linux-instance:~$ pwd
+/home/student-01-c85a3cfab519
+student-01-c85a3cfab519@linux-instance:~$ ls -aslh *
+data:
+total 12K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 15:16 .
+4.0K drwxr-xr-x 5 student-01-c85a3cfab519 student-01-c85a3cfab519 4.0K Sep 12 15:16 ..
+4.0K -rw-rw-rw- 1 root                    root                     609 Sep 12 15:16 user_emails.csv
+
+scripts:
+total 12K
+4.0K drwxrwxrwx 2 root                    root                    4.0K Sep 12 15:16 .
+4.0K drwxr-xr-x 5 student-01-c85a3cfab519 student-01-c85a3cfab519 4.0K Sep 12 15:16 ..
+4.0K -rw-rw-rw- 1 root                    root                     808 Sep 12 15:16 emails.py
+student-01-c85a3cfab519@linux-instance:~$ cat ~/data/user_emails.csv 
+Blossom Gill,blossom@abc.edu,
+Hayes Delgado,nonummy@abc.edu
+Petra Jones,ac@abc.edu
+Oleg Noel,noel@abc.edu
+Ahmed Miller,ahmed.miller@abc.edu
+Macaulay Douglas,mdouglas@abc.edu
+Aurora Grant,enim.non@abc.edu
+Madison Mcintosh,mcintosh@abc.edu
+Montana Powell,montanap@abc.edu
+Rogan Robinson,rr.robinson@abc.edu
+Simon Rivera,sri@abc.edu
+Benedict Pacheco,bpacheco@abc.edu
+Maisie Hendrix,mai.hendrix@abc.edu
+Xaviera Gould,xlg@abc.edu
+Oren Rollins,oren@abc.edu
+Flavia Santiago,flavia@abc.edu
+Jackson Owens,jacksonowens@abc.edu
+Britanni Humphrey,britanni@abc.edu
+Kirk Nixon,kirknixon@abc.edu
+Bree Campbell,breee@abc.edu
+student-01-c85a3cfab519@linux-instance:~$ cat ~/scripts/emails.py 
+#!/usr/bin/env python3
+
+import sys
+import csv
+
+def populate_dictionary(filename): 
+  """Populate a dictionary with name/email pairs for easy lookup."""
+  email_dict = {}
+  with open(filename) as csvfile:
+    lines = csv.reader(csvfile, delimiter = ',')
+    for row in lines:
+      name = str(row[0].lower())
+      email_dict[name] = row[1]
+  return email_dict
+
+def find_email(argv):
+  """ Return an email address based on the username given."""
+  # Create the username based on the command line input.
+  fullname = str(argv[1] + " " + argv[2])
+  # Preprocess the data
+  email_dict = populate_dictionary('/home/student-01-c85a3cfab519/data/user_emails.csv')
+  # Find and print the email
+  return email_dict.get(fullname.lower())
+
+def main():
+  print(find_email(sys.argv))
+
+if __name__ == "__main__":
+  main()
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails.py 
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 29, in <module>
+    main()
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 26, in main
+    print(find_email(sys.argv))
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    fullname = str(argv[1] + " " + argv[2])
+IndexError: list index out of range
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails.py Blossom Gill
+blossom@abc.edu
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py 
+-bash: /home/student-01-c85a3cfab519/scripts/emails.py: Permission denied
+student-01-c85a3cfab519@linux-instance:~$ sudo +x ~/scripts/emails.py 
+sudo: +x: command not found
+student-01-c85a3cfab519@linux-instance:~$ sudo chmod +x ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo +x ~/scripts/emails.py 
+sudo: +x: command not found
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py 
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 3, in <module>
+    import c
+ImportError: No module named 'c'
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py 
+Missing parameters
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py Blossom Gill
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 30, in <module>
+    main()
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 28, in main
+    print(find_email(sys.argv))
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 21, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 8, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py 
+Missing parameters
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py Blossom Gill
+blossom@abc.edu
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py 
+Missing parameters
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails_test.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ sudo chmod +x ~/scripts/emails_test.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails_test.py 
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py Kirk 
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 29, in <module>
+    main()
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 26, in main
+    print(find_email(sys.argv))
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    fullname = str(argv[1] + " " + argv[2])
+IndexError: list index out of range
+student-01-c85a3cfab519@linux-instance:~$ sudo chmod +x ~/scripts/emails_test.py 
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails_test.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails_test.py 
+.E
+======================================================================
+ERROR: test_one_name (__main__.TestFile)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 14, in test_one_name
+    self.assertEqual(find_email(testcase), expected)
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    fullname = str(argv[1] + " " + argv[2])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=1)
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py
+Missing parameters
+student-01-c85a3cfab519@linux-instance:~$ cat ~/scripts/emails.py
+#!/usr/bin/env python3
+
+import sys
+import csv
+
+def populate_dictionary(filename):
+  """Populate a dictionary with name/email pairs for easy lookup."""
+  email_dict = {}
+  with open(filename) as csvfile:
+    lines = csv.reader(csvfile, delimiter = ',')
+    for row in lines:
+      name = str(row[0].lower())
+      email_dict[name] = row[1]
+  return email_dict
+
+def find_email(argv):
+  """ Return an email address based on the username given."""
+  # Create the username based on the command line input.
+  try:
+    fullname = str(argv[1] + " " + argv[2])
+    # Preprocess the data
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+    # Find and print the email
+    return email_dict.get(fullname.lower())
+  except IndexError:
+    return "Missing parameters"
+
+def main():
+  print(find_email(sys.argv))
+if __name__ == "__main__":
+  main()
+student-01-c85a3cfab519@linux-instance:~$ export
+declare -x HOME="/home/student-01-c85a3cfab519"
+declare -x LANG="en_US.UTF-8"
+declare -x LC_ALL="en_US.UTF-8"
+declare -x LOGNAME="student-01-c85a3cfab519"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x MAIL="/var/mail/student-01-c85a3cfab519"
+declare -x OLDPWD
+declare -x PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+declare -x PWD="/home/student-01-c85a3cfab519"
+declare -x SHELL="/bin/bash"
+declare -x SHLVL="1"
+declare -x SSH_CLIENT="185.223.152.145 60784 22"
+declare -x SSH_CONNECTION="185.223.152.145 60784 10.138.0.2 22"
+declare -x SSH_TTY="/dev/pts/0"
+declare -x TERM="xterm-256color"
+declare -x USER="student-01-c85a3cfab519"
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails.py
+Missing parameters
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails_test.py 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails_test.py 
+..F
+======================================================================
+FAIL: test_two_name (__main__.EmailsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 21, in test_two_name
+    self.assertEqual(find_email(testcase), expected)
+AssertionError: None != 'No email address found'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ ~/scripts/emails_test.py 
+E.E
+======================================================================
+ERROR: test_basic (__main__.EmailsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 11, in test_basic
+    self.assertEqual(find_email(testcase), expected)
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 7, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+
+======================================================================
+ERROR: test_two_name (__main__.EmailsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 21, in test_two_name
+    self.assertEqual(find_email(testcase), expected)
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 7, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=2)
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails_test.py 
+E.E
+======================================================================
+ERROR: test_basic (__main__.EmailsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 11, in test_basic
+    self.assertEqual(find_email(testcase), expected)
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 7, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+
+======================================================================
+ERROR: test_two_name (__main__.EmailsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails_test.py", line 21, in test_two_name
+    self.assertEqual(find_email(testcase), expected)
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 7, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=2)
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails.py Roy Cooper 
+Traceback (most recent call last):
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 30, in <module>
+    main()
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 28, in main
+    print(find_email(sys.argv))
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 19, in find_email
+    email_dict = populate_dictionary('/home/{{ username }}/data/user_emails.csv')
+  File "/home/student-01-c85a3cfab519/scripts/emails.py", line 7, in populate_dictionary
+    with open(filename) as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/{{ username }}/data/user_emails.csv'
+student-01-c85a3cfab519@linux-instance:~$ sudo nano ~/scripts/emails.py 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails_test.py 
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+student-01-c85a3cfab519@linux-instance:~$ python3 ~/scripts/emails.py Roy Cooper 
+No email address found
+
+
+========================================
+
+student-01-c85a3cfab519@linux-instance:~$ cat ~/scripts/emails_test.py 
+#!/usr/bin/env python3
+
+import unittest
+from emails import find_email
+
+class EmailsTest(unittest.TestCase):
+  
+  def test_basic(self):
+    testcase = [None, "Bree", "Campbell"]
+    expected = "breee@abc.edu"
+    self.assertEqual(find_email(testcase), expected)
+  
+  def test_one_name(self):
+    testcase = [None, "John"]
+    expected = "Missing parameters"
+    self.assertEqual(find_email(testcase), expected)
+  
+  def test_two_name(self):
+    testcase = [None, "Roy","Cooper"]
+    expected = "No email address found"
+    self.assertEqual(find_email(testcase), expected)
+if __name__ == '__main__':
+  unittest.main()
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ 
+student-01-c85a3cfab519@linux-instance:~$ cat ~/scripts/emails.py 
+#!/usr/bin/env python3
+import csv
+import sys
+def populate_dictionary(filename):
+  """Populate a dictionary with name/email pairs for easy lookup."""
+  email_dict = {}
+  with open(filename) as csvfile:
+    lines = csv.reader(csvfile, delimiter = ',')
+    for row in lines:
+      name = str(row[0].lower())
+      email_dict[name] = row[1]
+  return email_dict
+def find_email(argv):
+  """ Return an email address based on the username given."""
+  # Create the username based on the command line input.
+  try:
+    fullname = str(argv[1] + " " + argv[2])
+    # Preprocess the data
+    email_dict = populate_dictionary('/home/student-01-c85a3cfab519/data/user_emails.csv')
+     # If email exists, print it
+    if email_dict.get(fullname.lower()):
+      return email_dict.get(fullname.lower())
+    else:
+      return "No email address found"
+  except IndexError:
+    return "Missing parameters"
+def main():
+  print(find_email(sys.argv))
+if __name__ == "__main__":
+  main()
+student-01-c85a3cfab519@linux-instance:~$ 
+
+

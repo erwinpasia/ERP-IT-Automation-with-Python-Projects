@@ -1,0 +1,151 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L71963515.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i student-01-0bdc17664dd6@35.237.235.14
+Warning: Identity file student-01-0bdc17664dd6@35.237.235.14 not accessible: No such file or directory.
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L71963515.pem student-01-0bdc17664dd6@35.237.235.14
+The authenticity of host '35.237.235.14 (35.237.235.14)' can't be established.
+ED25519 key fingerprint is SHA256:8c5mwTDCyazoUP1PWhsudhQvY4EB8LCrllmS7EhwRi8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '35.237.235.14' (ED25519) to the list of known hosts.
+Linux linux-instance 5.10.0-25-cloud-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Creating directory '/home/student-01-0bdc17664dd6'.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-0bdc17664dd6@linux-instance:~$ 
+student-01-0bdc17664dd6@linux-instance:~$ pwd
+/home/student-01-0bdc17664dd6
+student-01-0bdc17664dd6@linux-instance:~$ ls
+student-01-0bdc17664dd6@linux-instance:~$ 
+student-01-0bdc17664dd6@linux-instance:~$ 
+student-01-0bdc17664dd6@linux-instance:~$ 
+student-01-0bdc17664dd6@linux-instance:~$ ls
+student-01-0bdc17664dd6@linux-instance:~$ git clone https://github.com/erwinpasia/it-cert-automation-practice.git
+Cloning into 'it-cert-automation-practice'...
+remote: Enumerating objects: 55, done.
+remote: Total 55 (delta 0), reused 0 (delta 0), pack-reused 55
+Receiving objects: 100% (55/55), 15.11 KiB | 1.89 MiB/s, done.
+Resolving deltas: 100% (20/20), done.
+student-01-0bdc17664dd6@linux-instance:~$ ls
+it-cert-automation-practice
+student-01-0bdc17664dd6@linux-instance:~$ cd it-cert-automation-practice/
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ ls
+Course3  Course4  Course5  LICENSE  README.md  docs
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git remote -v
+origin	https://github.com/erwinpasia/it-cert-automation-practice.git (fetch)
+origin	https://github.com/erwinpasia/it-cert-automation-practice.git (push)
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git remote add upstream https://github.com/erwinpasia/it-cert-automation-practice.git
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git remote -v
+origin	https://github.com/erwinpasia/it-cert-automation-practice.git (fetch)
+origin	https://github.com/erwinpasia/it-cert-automation-practice.git (push)
+upstream	https://github.com/erwinpasia/it-cert-automation-practice.git (fetch)
+upstream	https://github.com/erwinpasia/it-cert-automation-practice.git (push)
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git config --global user.name "Name"
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git config --global user.email "user@example.com"
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git branch improve-username-behavior
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ git checkout improve-username-behavior
+Switched to branch 'improve-username-behavior'
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice$ cd ~/it-cert-automation-practice/Course3/Lab4
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ ls
+validations.py
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ cat validations.py
+#!/usr/bin/env python3
+
+import re
+
+def validate_user(username, minlen):
+    """Checks if the received username matches the required conditions."""
+    if type(username) != str:
+        raise TypeError("username must be a string")
+    if minlen < 1:
+        raise ValueError("minlen must be at least 1")
+    
+    # Usernames can't be shorter than minlen
+    if len(username) < minlen:
+        return False
+    # Usernames can only use letters, numbers, dots and underscores
+    if not re.match('^[a-z0-9._]*$', username):
+        return False
+    # Usernames can't begin with a number
+    if username[0].isnumeric():
+        return False
+    return True
+
+
+
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ nano validations.py
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ python3 validations.py
+True
+True
+True
+True
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ nano validations.py
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ python3 validations.py
+False
+True
+False
+True
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ git status
+On branch improve-username-behavior
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   validations.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ git add validations.py
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ git status
+On branch improve-username-behavior
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   validations.py
+
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ git commit
+[improve-username-behavior 47c4f1a] Closes: #1 Updated validations.py python script. Fixed the behavior of validate_user function in validations.py.
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ git push origin improve-username-behavior
+Username for 'https://github.com': erwinpasia@gmail.com
+Password for 'https://erwinpasia@gmail.com@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 564 bytes | 564.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'improve-username-behavior' on GitHub by visiting:
+remote:      https://github.com/erwinpasia/it-cert-automation-practice/pull/new/improve-username-behavior
+remote: 
+To https://github.com/erwinpasia/it-cert-automation-practice.git
+ * [new branch]      improve-username-behavior -> improve-username-behavior
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ ls
+validations.py
+student-01-0bdc17664dd6@linux-instance:~/it-cert-automation-practice/Course3/Lab4$ 
+
+

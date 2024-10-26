@@ -1,0 +1,335 @@
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ chmod 600 qwiklabs-L72184703.pem 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ 
+(base) erwinrpasia@hp-envy15:~/Downloads$ ssh -i qwiklabs-L72184703.pem student-01-fb88deab09b2@34.125.34.1
+The authenticity of host '34.125.34.1 (34.125.34.1)' can't be established.
+ED25519 key fingerprint is SHA256:M9deLy5RwtC/8WDdHq5cj3POByqPxTR3LR+NmozkBsU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.125.34.1' (ED25519) to the list of known hosts.
+Linux linux-instance 5.10.0-25-cloud-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+-bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+student-01-fb88deab09b2@linux-instance:~$ curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=$11hg55-dKdHN63yJP20dMLAgPJ5oiTOHF" > /dev/null | curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=11hg55-dKdHN63yJP20dMLAgPJ5oiTOHF" -o images.zip && sudo rm -rf cookie
+awk: cannot open ./cookie (No such file or directory)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100  327k  100  327k    0     0   217k      0  0:00:01  0:00:01 --:--:--  217k
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ ls
+images.zip
+student-01-fb88deab09b2@linux-instance:~$ unzip images.zip
+Archive:  images.zip
+   creating: images/
+  inflating: images/ic_local_gas_station_white_48dp  
+  inflating: images/ic_local_library_black_48dp  
+  inflating: images/ic_local_mall_white_48dp  
+  inflating: images/ic_local_convenience_store_white_48dp  
+  inflating: images/ic_directions_run_white_48dp  
+  inflating: images/ic_local_movies_white_48dp  
+  inflating: images/ic_near_me_black_48dp  
+  inflating: images/ic_navigation_white_48dp  
+  inflating: images/ic_directions_car_white_48dp  
+  inflating: images/ic_hotel_white_48dp  
+  inflating: images/ic_directions_railway_white_48dp  
+  inflating: images/ic_local_pizza_white_48dp  
+  inflating: images/ic_local_dining_black_48dp  
+  inflating: images/ic_layers_white_48dp  
+  inflating: images/ic_local_play_black_48dp  
+  inflating: images/ic_local_cafe_black_48dp  
+  inflating: images/ic_local_printshop_white_48dp  
+  inflating: images/ic_local_hotel_black_48dp  
+  inflating: images/ic_local_see_white_48dp  
+  inflating: images/ic_directions_walk_black_48dp  
+  inflating: images/ic_flight_black_48dp  
+  inflating: images/ic_directions_white_48dp  
+  inflating: images/ic_local_bar_black_48dp  
+  inflating: images/ic_local_atm_black_48dp  
+  inflating: images/ic_my_location_black_48dp  
+  inflating: images/ic_local_taxi_white_48dp  
+  inflating: images/ic_local_phone_black_48dp  
+  inflating: images/ic_local_activity_white_48dp  
+  inflating: images/ic_local_shipping_black_48dp  
+  inflating: images/ic_local_drink_white_48dp  
+  inflating: images/ic_local_florist_white_48dp  
+  inflating: images/ic_layers_clear_white_48dp  
+  inflating: images/ic_directions_transit_white_48dp  
+  inflating: images/ic_directions_bike_white_48dp  
+  inflating: images/ic_directions_subway_black_48dp  
+  inflating: images/ic_add_location_white_48dp  
+  inflating: images/ic_local_airport_black_48dp  
+  inflating: images/ic_local_laundry_service_white_48dp  
+  inflating: images/ic_local_hospital_black_48dp  
+  inflating: images/ic_local_car_wash_black_48dp  
+  inflating: images/ic_beenhere_black_48dp  
+  inflating: images/ic_edit_location_white_48dp  
+  inflating: images/ic_local_grocery_store_black_48dp  
+  inflating: images/ic_directions_boat_white_48dp  
+  inflating: images/ic_map_white_48dp  
+  inflating: images/ic_local_offer_black_48dp  
+  inflating: images/ic_local_pharmacy_white_48dp  
+  inflating: images/ic_local_post_office_white_48dp  
+  inflating: images/ic_directions_bus_white_48dp  
+  inflating: images/ic_ev_station_white_48dp  
+  inflating: images/ic_hotel_black_48dp  
+  inflating: images/ic_directions_car_black_48dp  
+  inflating: images/ic_local_printshop_black_48dp  
+  inflating: images/ic_local_cafe_white_48dp  
+  inflating: images/ic_local_play_white_48dp  
+  inflating: images/ic_local_dining_white_48dp  
+  inflating: images/ic_layers_black_48dp  
+  inflating: images/ic_directions_railway_black_48dp  
+  inflating: images/ic_local_pizza_black_48dp  
+  inflating: images/ic_local_convenience_store_black_48dp  
+  inflating: images/ic_local_mall_black_48dp  
+  inflating: images/ic_local_library_white_48dp  
+  inflating: images/ic_local_gas_station_black_48dp  
+  inflating: images/ic_navigation_black_48dp  
+  inflating: images/ic_local_parking_white_48dp  
+  inflating: images/ic_local_movies_black_48dp  
+  inflating: images/ic_directions_run_black_48dp  
+  inflating: images/ic_local_hospital_white_48dp  
+  inflating: images/ic_local_airport_white_48dp  
+  inflating: images/ic_local_laundry_service_black_48dp  
+  inflating: images/ic_add_location_black_48dp  
+  inflating: images/ic_directions_bike_black_48dp  
+  inflating: images/ic_directions_subway_white_48dp  
+  inflating: images/ic_directions_transit_black_48dp  
+  inflating: images/ic_ev_station_black_48dp  
+  inflating: images/ic_directions_bus_black_48dp  
+  inflating: images/ic_local_post_office_black_48dp  
+  inflating: images/ic_local_pharmacy_black_48dp  
+  inflating: images/ic_local_offer_white_48dp  
+  inflating: images/ic_map_black_48dp  
+  inflating: images/ic_directions_boat_black_48dp  
+  inflating: images/.DS_Store        
+  inflating: images/ic_local_grocery_store_white_48dp  
+  inflating: images/ic_beenhere_white_48dp  
+  inflating: images/ic_edit_location_black_48dp  
+  inflating: images/ic_local_car_wash_white_48dp  
+  inflating: images/ic_my_location_white_48dp  
+  inflating: images/ic_local_atm_white_48dp  
+  inflating: images/ic_local_bar_white_48dp  
+  inflating: images/ic_directions_black_48dp  
+  inflating: images/ic_flight_white_48dp  
+  inflating: images/ic_directions_walk_white_48dp  
+  inflating: images/ic_local_see_black_48dp  
+  inflating: images/ic_local_hotel_white_48dp  
+  inflating: images/ic_layers_clear_black_48dp  
+  inflating: images/ic_local_florist_black_48dp  
+  inflating: images/ic_local_drink_black_48dp  
+  inflating: images/ic_local_shipping_white_48dp  
+  inflating: images/ic_local_activity_black_48dp  
+  inflating: images/ic_local_phone_white_48dp  
+  inflating: images/ic_local_taxi_black_48dp  
+student-01-fb88deab09b2@linux-instance:~$ ls ~/images
+ic_add_location_black_48dp        ic_directions_subway_black_48dp   ic_layers_clear_white_48dp             ic_local_dining_white_48dp           ic_local_mall_black_48dp         ic_local_printshop_black_48dp
+ic_add_location_white_48dp        ic_directions_subway_white_48dp   ic_layers_white_48dp                   ic_local_drink_black_48dp            ic_local_mall_white_48dp         ic_local_printshop_white_48dp
+ic_beenhere_black_48dp            ic_directions_transit_black_48dp  ic_local_activity_black_48dp           ic_local_drink_white_48dp            ic_local_movies_black_48dp       ic_local_see_black_48dp
+ic_beenhere_white_48dp            ic_directions_transit_white_48dp  ic_local_activity_white_48dp           ic_local_florist_black_48dp          ic_local_movies_white_48dp       ic_local_see_white_48dp
+ic_directions_bike_black_48dp     ic_directions_walk_black_48dp     ic_local_airport_black_48dp            ic_local_florist_white_48dp          ic_local_offer_black_48dp        ic_local_shipping_black_48dp
+ic_directions_bike_white_48dp     ic_directions_walk_white_48dp     ic_local_airport_white_48dp            ic_local_gas_station_black_48dp      ic_local_offer_white_48dp        ic_local_shipping_white_48dp
+ic_directions_black_48dp          ic_directions_white_48dp          ic_local_atm_black_48dp                ic_local_gas_station_white_48dp      ic_local_parking_white_48dp      ic_local_taxi_black_48dp
+ic_directions_boat_black_48dp     ic_edit_location_black_48dp       ic_local_atm_white_48dp                ic_local_grocery_store_black_48dp    ic_local_pharmacy_black_48dp     ic_local_taxi_white_48dp
+ic_directions_boat_white_48dp     ic_edit_location_white_48dp       ic_local_bar_black_48dp                ic_local_grocery_store_white_48dp    ic_local_pharmacy_white_48dp     ic_map_black_48dp
+ic_directions_bus_black_48dp      ic_ev_station_black_48dp          ic_local_bar_white_48dp                ic_local_hospital_black_48dp         ic_local_phone_black_48dp        ic_map_white_48dp
+ic_directions_bus_white_48dp      ic_ev_station_white_48dp          ic_local_cafe_black_48dp               ic_local_hospital_white_48dp         ic_local_phone_white_48dp        ic_my_location_black_48dp
+ic_directions_car_black_48dp      ic_flight_black_48dp              ic_local_cafe_white_48dp               ic_local_hotel_black_48dp            ic_local_pizza_black_48dp        ic_my_location_white_48dp
+ic_directions_car_white_48dp      ic_flight_white_48dp              ic_local_car_wash_black_48dp           ic_local_hotel_white_48dp            ic_local_pizza_white_48dp        ic_navigation_black_48dp
+ic_directions_railway_black_48dp  ic_hotel_black_48dp               ic_local_car_wash_white_48dp           ic_local_laundry_service_black_48dp  ic_local_play_black_48dp         ic_navigation_white_48dp
+ic_directions_railway_white_48dp  ic_hotel_white_48dp               ic_local_convenience_store_black_48dp  ic_local_laundry_service_white_48dp  ic_local_play_white_48dp         ic_near_me_black_48dp
+ic_directions_run_black_48dp      ic_layers_black_48dp              ic_local_convenience_store_white_48dp  ic_local_library_black_48dp          ic_local_post_office_black_48dp
+ic_directions_run_white_48dp      ic_layers_clear_black_48dp        ic_local_dining_black_48dp             ic_local_library_white_48dp          ic_local_post_office_white_48dp
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ pip3 install pillow
+Collecting pillow
+  Downloading Pillow-10.0.1-cp39-cp39-manylinux_2_28_x86_64.whl (3.6 MB)
+     |████████████████████████████████| 3.6 MB 8.0 MB/s 
+Installing collected packages: pillow
+Successfully installed pillow-10.0.1
+student-01-fb88deab09b2@linux-instance:~$ ls
+images  images.zip
+student-01-fb88deab09b2@linux-instance:~$ ls -aslh /opt/icons/
+total 8.0K
+4.0K drwxr-xr-x 2 student-01-fb88deab09b2 root 4.0K Sep 15 15:33 .
+4.0K drwxr-xr-x 3 root                    root 4.0K Sep 15 15:33 ..
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ nano script_PIL.py
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ chmod +x script_PIL.py 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ ./script_PIL.py 
+OK
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ ls -aslh /opt/icons/
+total 428K
+ 12K drwxr-xr-x 2 student-01-fb88deab09b2 root            12K Sep 15 15:41 .
+4.0K drwxr-xr-x 3 root                    root           4.0K Sep 15 15:33 ..
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_add_location_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.6K Sep 15 15:41 ic_add_location_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_beenhere_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_beenhere_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_bike_black_48dp.jpeg
+8.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 4.3K Sep 15 15:41 ic_directions_bike_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_boat_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.5K Sep 15 15:41 ic_directions_boat_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_bus_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_directions_bus_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_car_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.0K Sep 15 15:41 ic_directions_car_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_railway_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_directions_railway_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_run_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_directions_run_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_subway_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.0K Sep 15 15:41 ic_directions_subway_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_transit_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.0K Sep 15 15:41 ic_directions_transit_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_directions_walk_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_directions_walk_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.0K Sep 15 15:41 ic_directions_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_edit_location_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.5K Sep 15 15:41 ic_edit_location_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_ev_station_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.3K Sep 15 15:41 ic_ev_station_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_flight_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.6K Sep 15 15:41 ic_flight_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_hotel_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.4K Sep 15 15:41 ic_hotel_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_layers_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_layers_clear_black_48dp.jpeg
+8.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 4.5K Sep 15 15:41 ic_layers_clear_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.3K Sep 15 15:41 ic_layers_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_activity_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_activity_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_airport_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.6K Sep 15 15:41 ic_local_airport_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_atm_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.3K Sep 15 15:41 ic_local_atm_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_bar_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.7K Sep 15 15:41 ic_local_bar_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_cafe_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.4K Sep 15 15:41 ic_local_cafe_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_car_wash_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.8K Sep 15 15:41 ic_local_car_wash_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_convenience_store_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.5K Sep 15 15:41 ic_local_convenience_store_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_dining_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.5K Sep 15 15:41 ic_local_dining_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_drink_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_local_drink_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_florist_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.5K Sep 15 15:41 ic_local_florist_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_gas_station_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.1K Sep 15 15:41 ic_local_gas_station_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_grocery_store_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_grocery_store_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_hospital_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.5K Sep 15 15:41 ic_local_hospital_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_hotel_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.4K Sep 15 15:41 ic_local_hotel_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_laundry_service_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.2K Sep 15 15:41 ic_local_laundry_service_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_library_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.7K Sep 15 15:41 ic_local_library_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_mall_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_mall_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_movies_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.0K Sep 15 15:41 ic_local_movies_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_offer_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.5K Sep 15 15:41 ic_local_offer_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.1K Sep 15 15:41 ic_local_parking_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_pharmacy_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_pharmacy_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_phone_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.5K Sep 15 15:41 ic_local_phone_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_pizza_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.9K Sep 15 15:41 ic_local_pizza_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_play_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_play_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_post_office_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.7K Sep 15 15:41 ic_local_post_office_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_printshop_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.6K Sep 15 15:41 ic_local_printshop_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_see_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.0K Sep 15 15:41 ic_local_see_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_shipping_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_local_shipping_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_local_taxi_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 3.1K Sep 15 15:41 ic_local_taxi_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_map_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.8K Sep 15 15:41 ic_map_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_my_location_black_48dp.jpeg
+8.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 4.2K Sep 15 15:41 ic_my_location_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_navigation_black_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers 2.3K Sep 15 15:41 ic_navigation_white_48dp.jpeg
+4.0K -rw-r--r-- 1 student-01-fb88deab09b2 google-sudoers  883 Sep 15 15:41 ic_near_me_black_48dp.jpeg
+student-01-fb88deab09b2@linux-instance:~$ cat script_PIL.py
+#!/usr/bin/env python3
+
+from PIL import Image
+import os
+
+# Define input and output directories
+input_directory = 'images'
+output_directory = '/opt/icons'
+
+# Ensure the output directory exists
+os.makedirs(output_directory, exist_ok=True)
+
+# Iterate through each file in the folder
+for filename in os.listdir(input_directory):
+    if filename.startswith('ic_') and filename != '.DS_Store':
+        file_path = os.path.join(input_directory, filename)
+        with Image.open(file_path) as image:
+            # Perform image transformations
+            image = image.rotate(270).resize((128, 128)).convert('RGB')
+
+            # Get the filename without extension
+            file_name_without_extension = os.path.splitext(filename)[0]
+
+            # Save the image in .jpeg format to the output directory
+            output_path = os.path.join(output_directory, f'{file_name_without_extension}.jpeg')
+            image.save(output_path, 'JPEG')
+
+print('OK')
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ 
+student-01-fb88deab09b2@linux-instance:~$ python3
+Python 3.9.2 (default, Feb 28 2021, 17:03:44) 
+[GCC 10.2.1 20210110] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from PIL import Image
+>>> img = Image.open("/opt/icons/ic_edit_location_black_48dp")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/student-01-fb88deab09b2/.local/lib/python3.9/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/icons/ic_edit_location_black_48dp'
+>>> img.format, img.size
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'img' is not defined
+>>> img = Image.open("/opt/icons/ic_my_location_black_48dp.jpeg")
+>>> img.format, img.size
+('JPEG', (128, 128))
+>>> 
+
+
