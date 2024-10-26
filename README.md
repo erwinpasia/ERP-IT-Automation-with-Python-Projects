@@ -1,4 +1,4 @@
-# [Google IT Automation with Python Professional Certificate's Automation Project](https://www.credly.com/badges/47116441-c734-4380-b36e-36c4eab41073) - COMPLETED!
+# [Google IT Automation with Python Professional Certificate's Projects](https://www.credly.com/badges/47116441-c734-4380-b36e-36c4eab41073) - COMPLETED!
 
 The Google IT Automation with Python Professional Certificate's Projects are designed to enhance your IT skills by teaching you how to use Python for automation, manage systems using Git and GitHub, and apply these skills in cloud environments. These projects provide practical experience aimed at preparing you for advanced roles in IT support or systems administration.
 
@@ -58,7 +58,7 @@ The Automation projects allow students to apply their skills to solve a real-wor
 ## [Credly Professional Badge Of Competency:](https://www.credly.com/badges/47116441-c734-4380-b36e-36c4eab41073)
 
 <p style="text-align:center">
-    <a href="https://www.credly.com/badges/47116441-c734-4380-b36e-36c4eab41073" target="_blank">
+    <a href="https://www.coursera.org/account/accomplishments/professional-cert/CL3DTC4H3GV2" target="_blank">
     <img src="images/GITAP_PC.png" alt="Google IT Automation with Python Professional Certificate"  />
     </a>
 </p>
